@@ -1,11 +1,11 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a Telegram File convert Bot!
+This is a 
 You can convert any Telegram Document, using this bot! With custom thumbnail
      
     """
     ABS_TEXT = " Please don't be selfish."
-    BANNED_USER_TEXT = "you are banned"
+    BANNED_USER_TEXT = "you are banned 🚫. Because you misused me. Please as my boss @anonymous9329 in the <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a>.Don't pm him"
     UPGRADE_TEXT = "No upgrade plan 🥰"
     DOWNLOAD_START = "trying to download"
     UPLOAD_START = "trying to upload"
@@ -18,24 +18,14 @@ You can convert any Telegram Document, using this bot! With custom thumbnail
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
     CUSTOM_CAPTION_UL_FILE = ""
-    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
-    CURENT_PLAN_DETAILS = """Current plan details
---------
-Telegram ID: <code>{}</code>
-Plan name: <a href='https://t.me/InFoTelGroup/174'>{}</a>
-Expires on: {}"""
-    HELP_USER = """I can do:
-👉 <a href="https://telegram.dog/FileConvertRobot">Convert To Streamable video any telegram file</a>
---------
-
-🔥 How to deploy : <a href='https://youtu.be/zQamSjXBpJU'>Click here</a>
-
-    © Group   : @InfotelGroup
-    © Channel : @DX_BotZ 
-    © credits : @Spechide
-
-Send /me to know current plan details
-
+    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found.😔"
+    CURENT_PLAN_DETAILS = """There is no plan till now you are free to use me 🤩"""
+    HELP_USER = """Hi there {m.form_user.first_name} I can convert telegram file to video
+How to use me :/nStep-1👉 Forward the file which you wanted to convert as streamable video 
+/nStep-2👉Reply to the message as /converttovideo.
+/nThanks to @TGBotsz, @InFoTelGroup /special thanks to @viruZs and @TheUnusualPsychopath
+/n/n/n<b>I am created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>/nDiscuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
 """
 
-    REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
+    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert.See /help for more info /n Don't u know 🤷‍♂️ where reply button is press no problem follow this
+/nStep-1 : long press on the file which you need to convert /nStep-2 See the left bottom there you can find reply"
