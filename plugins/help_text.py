@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 
 import os
 import sqlite3
-rom telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -67,8 +66,6 @@ async def start(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT,
-        parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Creator", url="t.me/Anonymous9329")]])
-        disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
 
