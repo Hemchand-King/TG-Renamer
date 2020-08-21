@@ -4,7 +4,7 @@ This is a telegram file to streamable video converter bot
 
 You can convert any Telegram Document, using this bot! With custom thumbnail
 
-Created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
+Created by <a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>
     """
 
     ABS_TEXT = " Please don't be selfish."
@@ -24,11 +24,12 @@ Created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found.😔"
     CURENT_PLAN_DETAILS = """There is no plan till now you are free to use me 🤩"""
     HELP_USER = """Hi there. I can convert telegram file to video
-How to use me :
 
-Step-1👉 Forward the file which you wanted to convert as streamable video 
+<b>How to use me :</b>
 
-Step-2👉Reply to the message as /converttovideo.
+<b>Step-1</b>👉 Forward the file which you wanted to convert as streamable video 
+
+<b>Step-2</b>👉Reply to the message as /converttovideo.
 (Long press on the file which you need to convert and check the left bottom you can find reply button)
 
 Thanks to @TGBotsz, @InFoTelGroup 
@@ -37,7 +38,7 @@ special thanks to @viruZs and @TheUnusualPsychopath
 
 
 
-<b>I am created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
+<b>I am created by <a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>
 Discuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
 """
 
