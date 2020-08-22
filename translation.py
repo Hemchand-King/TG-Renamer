@@ -9,7 +9,7 @@ If you are looking for making splitted files or you want to upload files more th
 Special thanks to @virZs
 
 
-<b><a href='https://t.me/anonymous9329'>My Father 👨‍💻 </a></b>
+<b><a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻 </a></b>
 
 <b><a href='https://t.me/anonymousbotsupporte'>Discuss 🗣</a></b>
 
