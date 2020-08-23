@@ -30,7 +30,7 @@ Expires on: {}"""
     HELP_USER = """Hi there I am a File 2 Video converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
 **How to use me :**
          1.Send me the TG file which you need to convert as file.
-         2.Reply the file with /converttofile.(If you don't know how to reply for a message as in this </a href='httsp://t.me/anonymousbotsupporte'>group 👥</a>
+         2.Reply the file with /converttovideo.(If you don't know how to reply for a message as in this </a href='httsp://t.me/anonymousbotsupporte'>group 👥</a>
          3.Please be patience till the file convert.
 """
 
