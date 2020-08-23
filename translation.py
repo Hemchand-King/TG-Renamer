@@ -4,7 +4,7 @@ This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
 Please send /help to know how to use me
 
-**This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss 
+<b>This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss </b>
      
     """
     ABS_TEXT = " Please don't be selfish."
@@ -14,7 +14,7 @@ Please send /help to know how to use me
     UPLOAD_START = "trying to upload.....📤"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "Pleae join <a herf='https://t.me/anonymousbotsupporte'>anonymous discuss group 🗣</a>\n<a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot \nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbostart=anydl_bot-bot \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in next 24 hr"
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
@@ -25,13 +25,14 @@ Please send /help to know how to use me
     CURENT_PLAN_DETAILS = """Current plan details
 --------
 Telegram ID: <code>{}</code>
-Plan name: <a href='https://t.me/InFoTelGroup/174'>{}</a>
-Expires on: {}"""
+Plan name: ________________
+Expires on: Your Death"""
     HELP_USER = """Hi there I am a File 2 Video converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
-**How to use me :**
-         1.Send me the TG file which you need to convert as file.
-         2.Reply the file with /converttovideo.(If you don't know how to reply for a message as in this </a href='httsp://t.me/anonymousbotsupporte'>group 👥</a>
-         3.Please be patience till the file convert.
+<b>How to use me :</b>
+         1.Send me the TG file which you /n         need to convert as file.
+         2.Reply the file with /converttovideo./n         (If you don't know how to reply for a message as in this </a href='httsp://t.me/anonymousbotsupporte'>group 👥</a>
+         3.Please be patience till the file 
+         convert.
 """
 
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert.See /help"
