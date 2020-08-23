@@ -2,40 +2,36 @@ class Translation(object):
     START_TEXT = """Hello,
 This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
+Please send /help to know how to use me
+
+**This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss 
      
     """
     ABS_TEXT = " Please don't be selfish."
     BANNED_USER_TEXT = "you are banned"
     UPGRADE_TEXT = "No upgrade plan 🥰"
-    DOWNLOAD_START = "trying to download"
-    UPLOAD_START = "trying to upload"
+    DOWNLOAD_START = "trying to download.....📥"
+    UPLOAD_START = "trying to upload.....📤"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "https://t.me/fileConvertRobot"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Pleae join <a herf='https://t.me/anonymousbotsupporte'>anonymous discuss group 🗣</a>\n<a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in next 24 hr"
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
-    SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
-    CUSTOM_CAPTION_UL_FILE = ""
+    SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully. Trying to convert as stremable video please relax 💆‍♂️"
+    CUSTOM_CAPTION_UL_FILE = "@streamblevideo_bot"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     CURENT_PLAN_DETAILS = """Current plan details
 --------
 Telegram ID: <code>{}</code>
 Plan name: <a href='https://t.me/InFoTelGroup/174'>{}</a>
 Expires on: {}"""
-    HELP_USER = """I can do:
-👉 <a href="https://telegram.dog/FileConvertRobot">Convert To Streamable video any telegram file</a>
---------
-
-🔥 How to deploy : <a href='https://youtu.be/zQamSjXBpJU'>Click here</a>
-
-    © Group   : @InfotelGroup
-    © Channel : @DX_BotZ 
-    © credits : @Spechide
-
-Send /me to know current plan details
-
+    HELP_USER = """Hi there I am a File 2 Video converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
+**How to use me :**
+         1.Send me the TG file which you need to convert as file.
+         2.Reply the file with /converttofile.(If you don't know how to reply for a message as in this </a href='httsp://t.me/anonymousbotsupporte'>group 👥</a>
+         3.Please be patience till the file convert.
 """
 
-    REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
+    REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert.See /help"
