@@ -63,7 +63,7 @@ async def start(bot, update):
           InlineKeyboardButton('Updates ⚒', url='https://t.me/anonymousbotupdates')
         ]
     )
-
+    return 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
