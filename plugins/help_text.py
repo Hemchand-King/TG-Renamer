@@ -94,3 +94,18 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
+
+
+
+    # Join chat via username
+    app.join_chat("pyrogram")
+
+    # Join chat via invite link
+    app.join_chat("https://t.me/joinchat/AAAAAE0QmSW3IUmm3UFR7A")
+
+    # Join a linked chat
+    app.join_chat(app.get_chat("pyrogram").linked_chat.id)
+
+
+
+
