@@ -43,6 +43,8 @@ async def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
+from pyrogram import InlineKeyboardMarkup, InlineKeywoardButton
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
     # logger.info(update)
@@ -51,6 +53,14 @@ async def start(bot, update):
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(update.from_user.first_name), 
         reply_to_message_id=update.message_id
+        reply_markup=InlineKeyboardMarkup(
+        [
+          [
+          InlineKeyboardButton('My Father 🧛‍♂️', url='https://t.me/Ns_AnoNymous'),
+          InlineKeyboardButton('Discuss 🗣', url='https://t.me/anonymousbotdiscussion')
+          ],
+          [
+          InlineKeyboardButton('Updates ⚒', url='https://t.me/anonymousbotupdates')
     )
 
 
