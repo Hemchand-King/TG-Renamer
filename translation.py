@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """Hello {} ,
+    START_TEXT = """Hello {} .format(message.from_user.first_name))
 This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
 Please send /help to know how to use me
