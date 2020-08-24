@@ -61,6 +61,7 @@ async def start(bot, update):
           ],
           [
           InlineKeyboardButton('Updates ⚒', url='https://t.me/anonymousbotupdates')
+        ]
     )
 
 
