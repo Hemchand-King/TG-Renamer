@@ -73,7 +73,7 @@ async def start(bot, update):
          [
          InlineKeyboardButton('My Father 👨‍💻', url='https://t.me/Ns_AnoNymouS'),
          InlineKeyboardButton('Discussion 🗣', url='https://t.me/anonymousbotdiscussion')
-         ]'
+         ],
          [
          InlineKeyboardButton('Updates Channel ⚒', url='https://t.me/anonymousbotupdates')
          ]
