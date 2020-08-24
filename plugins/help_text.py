@@ -98,13 +98,13 @@ async def upgrade(bot, update):
 
 
     # Join chat via username
-    app.join_chat("pyrogram")
+    bot.join_chat("pyrogram")
 
     # Join chat via invite link
-    app.join_chat("https://t.me/joinchat/AAAAAE0QmSW3IUmm3UFR7A")
+    bot.join_chat("https://t.me/joinchat/AAAAAE0QmSW3IUmm3UFR7A")
 
     # Join a linked chat
-    app.join_chat(app.get_chat("pyrogram").linked_chat.id)
+    bot.join_chat(app.get_chat("pyrogram").linked_chat.id)
 
 
 
