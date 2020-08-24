@@ -43,7 +43,7 @@ async def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
-from pyrogram import InlineKeyboardMarkup, InlineKeywoardButton
+from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
