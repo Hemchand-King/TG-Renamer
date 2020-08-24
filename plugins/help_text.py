@@ -96,18 +96,3 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
-
-else:
-
-from pyrogram import Client
-
-app = Client("my_account")
-
-with app:
-
-    bot.send_message("haskell", "hi")
-    # Set slow mode to 60 seconds
-   bot.set_slow_mode("pyrogramchat", 60)
-
-   # Disable slow mode
-   bot.set_slow_mode("pyrogramchat", None)
