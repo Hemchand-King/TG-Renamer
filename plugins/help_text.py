@@ -70,12 +70,13 @@ async def start(bot, update):
         #reply_to_message_id=update.message_id
         reply_markup=InlineKeyboardMarkup(
        [
-        [
-        InlineKeyboardButton('My Father 👨‍💻', url='https://t.me/Ns_AnoNymouS'),
-        InlineKeyboardButton('Discussion 🗣', url='https://t.me/anonymousbotdiscussion')
-        ]'
-        [
-        InlineKeyboardButton('Updates Channel ⚒', url='https://t.me/anonymousbotupdates')
+         [
+         InlineKeyboardButton('My Father 👨‍💻', url='https://t.me/Ns_AnoNymouS'),
+         InlineKeyboardButton('Discussion 🗣', url='https://t.me/anonymousbotdiscussion')
+         ]'
+         [
+         InlineKeyboardButton('Updates Channel ⚒', url='https://t.me/anonymousbotupdates')
+         ]
        ]
       )
     )
