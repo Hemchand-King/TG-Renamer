@@ -98,6 +98,7 @@ async def upgrade(bot, update):
     )
 
 else:
+
 from pyrogram import Client
 
 app = Client("my_account")
