@@ -67,7 +67,7 @@ async def start(bot, update):
         chat_id=update.chat.id,
         text=Translation.START_TEXT,
         reply_to_message_id=update.message_id
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('My Father 👨‍💻',url='https://t.me/Ns_AnoNymouS')]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('My Father 👨‍💻', url='https://t.me/Ns_AnoNymouS')]])
     )
     return
 
