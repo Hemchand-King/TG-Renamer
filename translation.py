@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """<h1>Hello</h1>,
+    START_TEXT = """Hello,
 This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
 Please send /help to know how to use me
