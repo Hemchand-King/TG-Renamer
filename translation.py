@@ -1,10 +1,10 @@
 class Translation(object):
-    START_TEXT = """Hello {} 
+    START_TEXT = """Hello <i><b>{}</b></i>
 This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
 Please send /help to know how to use me
 
-<b>This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss </b>
+This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss
      
     """
     ABS_TEXT = " Please don't be selfish."
