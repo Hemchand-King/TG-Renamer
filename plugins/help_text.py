@@ -78,22 +78,3 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
-
-import pyrogram
-
-bot = bot.TeleBot("")
-
-@bot.message_handler(commands=['start'])
-def check(message):
-  try:
-    a = bot.get_chat_member(chat_id='@anonymousbotupdates', user_id=message.from_user.id)
-
-  except:
-    a = "You are not subscribed to our channel!"
-  
-  bot.send_message(message.chat.id, a)
-
-  
-
-if name == "main":
-  bot.polling(none_stop=True)
