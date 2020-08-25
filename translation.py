@@ -23,12 +23,12 @@ Please send /help to know how to use me
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully. Trying to convert as stremable video please relax 💆‍♂️"
     CUSTOM_CAPTION_UL_FILE = "@streamblevideo_bot"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found.🤷‍♂️"
-    CURENT_PLAN_DETAILS = """Current plan details
---------
-Telegram ID: <code>{}</code>
-Plan name: ________________
-Expires on: Your Death 🛌"""
-    HELP_USER = """Hi there I am a File 2 Video converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
+    CURENT_PLAN_DETAILS = """Hello {},
+These are you current plane details 👇
+<b>Telegram ID: </b><code>{}</code>
+<b>Plan name:</b> Unlimited 😳
+<b>Expires on: </b>🤷‍♂️"""
+    HELP_USER = """Hi there I am a File 📁 2 Video 📹 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
 <b>How to use me :</b>
          1.Send me the TG file which you \n         need to convert as file.
 
@@ -36,6 +36,8 @@ Expires on: Your Death 🛌"""
 
          3.Please be patience till the file 
          convert.
+
+If the bot was not working contact <a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍🏫 </a>
 """
 
-    REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert.See /help"
+    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert.See /help"
