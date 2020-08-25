@@ -37,7 +37,7 @@ async def help_user(bot, update):
     TRChatBase(update.from_user.id, update.text, "/help")
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.HELP_USER,
+        text=Translation.HELP_USER.formar(update.from_user.first_name),
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
@@ -77,7 +77,8 @@ async def start(bot, update):
          InlineKeyboardButton('Discussion 🗣', url='https://t.me/anonymousbotdiscussion')
          ],
          [
-         InlineKeyboardButton('Updates Channel ⚒', url='https://t.me/anonymousbotupdates')
+         InlineKeyboardButton('Updates Channel ⚒', url='https://t.me/anonymousbotupdates'),
+         InlineKeyboardButton('Rate Me ⭐', url='https://t.me/anonymousbotdiscussion/70')
          ]
        ]
       )
@@ -91,7 +92,7 @@ async def upgrade(bot, update):
     TRChatBase(update.from_user.id, update.text, "/upgrade")
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.UPGRADE_TEXT,
+        text=Translation.UPGRADE_TEXT.format(update.from_user.first_name),
         parse_mode="html",
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
