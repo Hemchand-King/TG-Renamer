@@ -1,8 +1,11 @@
 class Translation(object):
     START_TEXT = """Hello <i><b>{}</b></i>,
 
+
 This is a Telegram File 2 video convert bot
+
 You can convert any Telegram Document, using this bot! With custom thumbnail
+
 Please send /help to know how to use me
 
 <i>This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss</i>
