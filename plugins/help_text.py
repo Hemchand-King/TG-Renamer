@@ -79,7 +79,7 @@ async def upgrade(bot, update):
         disable_web_page_preview=True
     )
 
-import telebot
+import pyrogram
 
 bot = telebot.TeleBot("")
 
