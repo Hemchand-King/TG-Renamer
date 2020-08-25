@@ -79,6 +79,3 @@ async def upgrade(bot, update):
         disable_web_page_preview=True
     )
 
-
-dan = bot.get_chat_member("@anonymousbotdiscussion", "user")
-print(dan)
