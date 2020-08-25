@@ -78,3 +78,12 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
+
+from pyrogram import Client
+
+app = Client("my_account")
+target = "pyrogramchat"  # Target channel/supergroup
+
+with app:
+    for member in app.iter_chat_members(target):
+        print(member.user.first_name)
