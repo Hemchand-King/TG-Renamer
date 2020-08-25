@@ -86,7 +86,7 @@ bot = telebot.TeleBot("")
 @bot.message_handler(commands=['start'])
 def check(message):
   try:
-    a = bot.get_chat_member(chat_id='@channel username', user_id=message.from_user.id)
+    a = bot.get_chat_member(chat_id='@anonymousbotupdates', user_id=message.from_user.id)
 
   except:
     a = "You are not subscribed to our channel!"
