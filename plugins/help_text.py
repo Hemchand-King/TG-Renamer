@@ -79,3 +79,21 @@ async def upgrade(bot, update):
         disable_web_page_preview=True
     )
 
+import telebot
+
+bot = telebot.TeleBot("")
+
+@bot.message_handler(commands=['start'])
+def check(message):
+  try:
+    a = bot.get_chat_member(chat_id='@channel username', user_id=message.from_user.id)
+
+  except:
+    a = "You are not subscribed to our channel!"
+  
+  bot.send_message(message.chat.id, a)
+
+  
+
+if name == "main":
+  bot.polling(none_stop=True)
