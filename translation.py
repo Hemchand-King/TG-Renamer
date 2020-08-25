@@ -28,7 +28,7 @@ These are you current plane details 👇
 <b>Telegram ID: </b><code>{}</code>
 <b>Plan name:</b> Unlimited 😳
 <b>Expires on: </b>🤷‍♂️"""
-    HELP_USER = """Hi there I am a File 📁 2 Video 📹 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
+    HELP_USER = """Hi {} I am a File 📁 2 Video 📹 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
 <b>How to use me :</b>
          1.Send me the TG file which you \n         need to convert as file.
 
