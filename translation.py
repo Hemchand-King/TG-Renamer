@@ -30,9 +30,9 @@ These are you current plane details 👇
 <b>Expires on: </b>🤷‍♂️"""
     HELP_USER = """Hi {} I am a File 📁 2 Video 📹 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
 <b>How to use me :</b>
-         1.Send me the TG file which you \n         need to convert as file.
+         1.Send me the TG file which\n         you need to convert as file.
 
-         2.Reply the file with \n         /converttovideo.\n(If you don't know how to reply for a message as in this <a href='https://t.me/anonymousbotsupporte'>group 👥</a>
+         2.Reply the file with \n         /converttovideo.\n\n(If you don't know how to reply for a message as in this <a href='https://t.me/anonymousbotsupporte'>group 👥</a>
 
          3.Please be patience till the file 
          convert.
