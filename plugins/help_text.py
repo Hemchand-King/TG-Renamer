@@ -81,7 +81,7 @@ async def upgrade(bot, update):
 
 import pyrogram
 
-bot = telebot.TeleBot("")
+bot = bot.TeleBot("")
 
 @bot.message_handler(commands=['start'])
 def check(message):
