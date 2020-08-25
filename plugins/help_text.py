@@ -81,9 +81,5 @@ async def upgrade(bot, update):
 
 from pyrogram import Client
 
-app = Client("my_account")
-target = "pyrogramchat"  # Target channel/supergroup
-
-with app:
-    for member in app.iter_chat_members(target):
-        print(member.user.first_name)
+dan = app.get_chat_member("@anonymousbotdiscussion", "user")
+print(dan)
