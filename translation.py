@@ -4,7 +4,7 @@ This is a Telegram File convert Bot!
 You can convert any Telegram Document, using this bot! With custom thumbnail
 Please send /help to know how to use me
 
-This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss
+<i>This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss<\i>
      
     """
     ABS_TEXT = " Please don't be selfish."
