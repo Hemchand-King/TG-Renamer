@@ -20,7 +20,7 @@ Type /help for more details."""
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
-    CUSTOM_CAPTION_UL_FILE = "{} \n\n@renamer23_bot"
+    CUSTOM_CAPTION_UL_FILE = "<b>{}</b> \n\n@renamer23_bot"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     HELP_USER = """Hai am Rename bot..
