@@ -32,7 +32,7 @@ URL | filename | username | password"""
     NO_VOID_FORMAT_FOUND = "🤦‍♂️ ERROR...\n<b>YouTubeDL</b> said: {}"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     CURENT_PLAN_DETAILS = """There is no plane till now you are free to use me 🤩"""
-    HELP_USER = """Hi {},
+    HELP_USER = """Hi <i>{}</i>,
 
 I am URL Uploader bot...📤
     
