@@ -96,19 +96,19 @@ async def upgrade(bot, update):
 import pyrogram
 
 try:
-  chat = await.bot.get_member(CHANNEL_USERNAME, chat_id)
-  if chat.status=='kicked':
-     if eidit_message:
-        await reply(😡 hai {} you are banned you are not able to use me).format(user.from_user.first_name)
-     return False
-   else:
-     return True
+    chat = await.bot.get_member(CHANNEL_USERNAME, chat_id)
+    if chat.status=='kicked':
+      if eidit_message:
+         await reply(😡 hai {} you are banned you are not able to use me).format(user.from_user.first_name)
+      return False
+    else:
+      return True
 
 except UserNotParticipant:
-   if edit_message:
-      button = [[InlineKeyboardButton('join Updates channel 📣', url='https://t.me/anonymousbotupdates')]]
-      markup = InlineKeyboardMarkup(button)
-      await reply("""Hai bro you must join my channel for using my bot""",  reply_markup=markup)
+    if edit_message:
+       button = [[InlineKeyboardButton('join Updates channel 📣', url='https://t.me/anonymousbotupdates')]]
+       markup = InlineKeyboardMarkup(button)
+       await reply("""Hai bro you must join my channel for using my bot""",  reply_markup=markup)
 except Exception:
     LOGGER.exception('Unable to verify user')
     if edit_message:
