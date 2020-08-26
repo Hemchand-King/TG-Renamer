@@ -6,7 +6,7 @@ I can upload direct link to telegram without using your data (📁 file limit is
 
 If you are looking for making splitted files or you want to upload files more than 1.95GB use <a href='https://t.me/anonymousleechgroup'>leech group</a>
 
-Special thanks to @virZs 
+Special thanks to @viruZs 
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
