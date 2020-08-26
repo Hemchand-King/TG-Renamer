@@ -96,7 +96,7 @@ async def upgrade(bot, update):
 
 try:
   chat = await.bot.get_member(CHANNEL_USERNAME, chat_id)
-  if chat.sta
+  if chat.status=='kicked'
 
 
 
