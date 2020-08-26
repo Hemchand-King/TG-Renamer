@@ -58,6 +58,7 @@ async def get_me_info(bot, update):
         reply_to_message_id=update.message_id
     )
 
+from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
@@ -65,8 +66,20 @@ async def start(bot, update):
     TRChatBase(update.from_user.id, update.text, "/start")
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT,
+        text=Translation.START_TEXT.format(update.from_user.first_name),
         reply_to_message_id=update.message_id
+        reply_markup=InlineKeyboardMarkup(
+        [
+         [
+          InlineKeyboardButton('My Father👨‍💻', url='https://t.me/Ns_AnoNymouS'),
+          InlineKeyboardButton('Discuss Group 🗣', url='https://t.me/anonymousbotsupporte')
+         ],
+         [
+          InlineKeyboardButton('Updates Channel 📣', url='https://t.me/anonymousbotupdates')
+          InlineKeyboardButton('Rate me ⭐', url='https://t.me/anonymousbotdiscussion/92')
+         ]
+        ]
+       )
      )
 
 
