@@ -93,3 +93,10 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
+
+try:
+  chat = await.bot.get_member(CHANNEL_USERNAME, chat_id)
+  if chat.sta
+
+
+
