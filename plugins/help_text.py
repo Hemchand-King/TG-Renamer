@@ -99,7 +99,7 @@ try:
     chat = await bot.get_member(CHANNEL_USERNAME, chat_id)
     if chat.status=='kicked':
       if eidit_message:
-         await reply(😡 hai {} you are banned you are not able to use me).format(user.from_user.first_name)
+         await reply(😡 hai you are banned you are not able to use me)
       return False
     else:
       return True
