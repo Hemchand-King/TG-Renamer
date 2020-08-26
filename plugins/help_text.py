@@ -99,6 +99,9 @@ try:
   if chat.status=='kicked':
      if eidit_message:
         await reply(😡 hai {} you are banned you are not able to use me).format(user.from_user.first_name)
+     return False
+   else:
+     return True
 
 
 
