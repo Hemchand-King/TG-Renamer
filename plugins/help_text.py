@@ -103,7 +103,7 @@ try:
       return False
     else:
       return True
-except UserBannedInChannel
+except UserBannedInChannel:
     if edit_message:
        await reply("Hai {} you made a mistake so you are banned from channel so you are banned from me too 😜").format(update.from_user.first_name)
 
