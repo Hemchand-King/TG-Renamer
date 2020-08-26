@@ -75,7 +75,7 @@ async def start(bot, update):
           InlineKeyboardButton('Discuss Group 🗣', url='https://t.me/anonymousbotsupporte')
          ],
          [
-          InlineKeyboardButton('Updates Channel 📣', url='https://t.me/anonymousbotupdates')
+          InlineKeyboardButton('Updates Channel 📣', url='https://t.me/anonymousbotupdates'),
           InlineKeyboardButton('Rate me ⭐', url='https://t.me/anonymousbotdiscussion/92')
          ]
         ]
