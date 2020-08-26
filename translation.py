@@ -1,19 +1,12 @@
 class Translation(object):
-    START_TEXT = """Hello,
+    START_TEXT = """Hello <i>{}</i>,
 This is a Telegram URL Upload Bot!
 
 I can upload direct link to telegram without using your data (📁 file limit is 1.95GB)
 
 If you are looking for making splitted files or you want to upload files more than 1.95GB use <a href='https://t.me/anonymousleechgroup'>leech group</a>
 
-Special thanks to @virZs
-
-
-<b><a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻 </a></b>
-
-<b><a href='https://t.me/anonymousbotsupporte'>Discuss 🗣</a></b>
-
-
+Special thanks to @virZs 
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
