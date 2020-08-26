@@ -81,7 +81,6 @@ async def start(bot, update):
         ]
        )
      )
-     return
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
