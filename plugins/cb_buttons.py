@@ -55,7 +55,7 @@ except UserNotParticipant:
                    button = [[InlineKeyboardButton('join Updates channel 📣', url='https://t.me/anonymousbotupdates')]]
                    markup = InlineKeyboardMarkup(button)
                    await reply("""Hai bro you must join my channel for using my bot""",  reply_markup=markup)
- except Exception:
+except Exception:
                 LOGGER.exception('Unable to verify user')
            if edit_message:
               await reply('Some thing went wrong while checking please try later')
