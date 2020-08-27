@@ -141,3 +141,18 @@ async def rename_doc(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
+
+
+
+#startswith
+
+#@pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
+#async def rename_doc(bot, update):
+    #if update.from_user.id not in Config.BANNED_USERS:
+        #await bot.delete_messages(
+            #chat_id=update.chat.id,
+            #message_ids=update.message_id,
+            #revoke=True
+        #)
+        #return
+
