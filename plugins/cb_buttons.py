@@ -133,3 +133,25 @@ async def button(bot, update):
     elif "=" in cb_data:
         await ddl_call_back(bot, update)
 
+            try:
+                chat = await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
+                if chat.status=='kicked':
+                   if edit_message:
+                                   await reply('😡 hai {} you are banned you are not able to use me').format(update.from_user.first_name)
+                return False
+                else:
+                     return True
+                except UserBannedInChannel:
+                if edit_message:
+                                await reply("Hai {} you made a mistake so you are banned from channel so you are banned from me too 😜").format(update.from_user.first_name)
+
+except UserNotParticipant:
+    if edit_message:
+       button = [[InlineKeyboardButton('join Updates channel 📣', url='https://t.me/anonymousbotupdates')]]
+       markup = InlineKeyboardMarkup(button)
+       await reply("""Hai bro you must join my channel for using my bot""",  reply_markup=markup)
+except Exception:
+    LOGGER.exception('Unable to verify user')
+    if edit_message:
+       await reply('Some thing went wrong while checking please try later')
+return False
