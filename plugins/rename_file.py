@@ -152,7 +152,7 @@ async def rename_doc(bot, update):
         await bot.stop_transmission(
             chat_id=update.chat.id,
             message_ids=a.message_id,
-            revoke=True
+            revoke=False
         )
         return
 
