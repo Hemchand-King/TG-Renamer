@@ -39,21 +39,6 @@ async def progress_for_pyrogram(
         time_to_complete = round((total - current) / speed) / 60
         estimated_total_time = elapsed_time + time_to_completion
 
-
-        #if time_to_complete < 1:
-           #accurate_time = time_to_complete * 60
-        #elif time_to_complete > 60:
-             #accurate_time = time_to_complete / 60
-        #elif time_to_complete > 1 and time_to_complate <= 60:
-              #accurate_time = time_to_complete
-
-        #if time_to_complete < 1:
-           #x = sec
-        #elif time_to_complete > 60:
-             #x = hours
-        #elif time_to_complete > 1 and time_to_complate <= 60:
-              #x = min
-
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
