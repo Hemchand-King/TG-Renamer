@@ -144,15 +144,15 @@ async def rename_doc(bot, update):
 
 
 
-#startswith
+from pyrogram import Client
 
-#@pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
-#async def rename_doc(bot, update):
-    #if update.from_user.id not in Config.BANNED_USERS:
-        #await bot.delete_messages(
-            #chat_id=update.chat.id,
-            #message_ids=update.message_id,
-            #revoke=True
-        #)
-        #return
+@pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
+async def rename_doc(bot, update):
+    if update.from_user.id not in Config.BANNED_USERS:
+        await bot.stop_transmission(
+            chat_id=update.chat.id,
+            message_ids=a.message_id,
+            revoke=True
+        )
+        return
 
