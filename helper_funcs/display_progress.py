@@ -62,13 +62,12 @@ async def progress_for_pyrogram(
             ''.join(["○" for i in range(10 - math.floor(percentage / 10))])
             )
 
-        tmp = progress + "\nDone ✅ : {0}\nTotal : {1}\nSpeed 🚀 : {2}/s\nRemaining Time  ⏰: {3}{4}\n".format(
+        tmp = progress + "\nDone ✅ : {0}\nTotal : {1}\nSpeed 🚀 : {2}/s\nRemaining Time  ⏰: {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
             accurate_time if time_to_completion != '' else "0 s",
-            x
         )
         try:
             await message.edit(
