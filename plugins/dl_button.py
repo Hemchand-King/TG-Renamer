@@ -289,10 +289,18 @@ File Size: {}""".format(url, humanbytes(total_length))
                         (total_length - downloaded) / speed) * 1000
                     estimated_total_time = elapsed_time + time_to_completion
                     try:
-                        current_message = """**Download Status**
-\nDownloaded ✅: {}
-\nTotal File Size : {}
-\nTime Left ⏰ : {}""".format(
+                        current_message = """**_Download Status_**
+
+**Percentage :** {}
+
+({}{})
+
+\n**Downloaded ✅ :** {}
+\n**Total File Size :** {}
+\n**Time Left ⏰ :** {}""".format(round(percentage, 2),
+            ''.join(["●" for i in range(math.floor(percentage / 10))]),
+            ''.join(["○" for i in range(10 - math.floor(percentage / 10))])
+            )
     humanbytes(total_length),
     humanbytes(downloaded),
     TimeFormatter(time_to_completion)
