@@ -291,14 +291,14 @@ File Size: {}""".format(url, humanbytes(total_length))
                     try:
                         current_message = """**__Download Status__**
 
-**Percentage :** {}%
 
-({}{})
+({}{}){}%
 \n**Downloaded ✅ :** {}
 \n**Total File Size :** {}
-\n**Time Left ⏰ :** {}""".format(round(percentage, 2),
+\n**Time Left ⏰ :** {}""".format(
             ''.join(["●" for i in range(math.floor(percentage / 10))]),
             ''.join(["○" for i in range(10 - math.floor(percentage / 10))]),
+    round(percentage, 2),
     humanbytes(total_length),
     humanbytes(downloaded),
     TimeFormatter(time_to_completion)
