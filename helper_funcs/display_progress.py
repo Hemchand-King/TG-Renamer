@@ -1,3 +1,4 @@
+  
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
@@ -36,23 +37,23 @@ async def progress_for_pyrogram(
         percentage = current * 100 / total
         speed = current / diff
         elapsed_time = round(diff) * 1000
-        time_to_complete = round((total - current) / speed) / 60
+        time_to_completion = round((total - current) / speed) / 60
         estimated_total_time = elapsed_time + time_to_completion
 
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-        progress = "Percentage {0}%\n({1}{2})".format(round(percentage, 2),
+        progress = "Percentage : {0}%\n({1}{2})\n".format(round(percentage, 2),
             ''.join(["●" for i in range(math.floor(percentage / 10))]),
             ''.join(["○" for i in range(10 - math.floor(percentage / 10))])
             )
 
-        tmp = progress + "\nDone ✅ : {0}\nTotal : {1}\nSpeed 🚀 : {2}/s\nRemaining Time  ⏰: {3}\n".format(
+        tmp = progress + "\nDone ✅ : {0} \nTotal : {1}\nSpeed 🚀 : {2}/s\Time Left ⏰: {3}min\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
-            time_to_complete if time_to_completion != '' else "0 s",
+            time_to_completion if estimated_total_time != '' else "0 s"
         )
         try:
             await message.edit(
