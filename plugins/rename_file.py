@@ -146,13 +146,15 @@ async def rename_doc(bot, update):
 
 from pyrogram import Client
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
-async def bot(bot, update):
-    if update.from_user.id not in Config.BANNED_USERS:
-        await bot.stop_transmission(
-            chat_id=update.chat.id,
-            message_ids=a.message_id,
-            revoke=False
-        )
-        return
+app = Client(chat_id)
 
+# Example to stop transmission once the upload progress reaches 50%
+# Useless in practice, but shows how to stop on command
+def progress(reply_message, total, client):
+    if reply_message = /cancel:
+
+        client.stop_transmission()
+
+    return = True
+else:
+    return = False
