@@ -43,9 +43,9 @@ try:
     if chat.status=='kicked':
        if edit_message:
           await reply('😡 hai {} you are banned you are not able to use me').format(update.from_user.first_name)
-     return False
+          return False
     else:
-     return True
+         return True
     except UserBannedInChannel:
            if edit_message:
               await reply("Hai {} you made a mistake so you are banned from channel so you are banned from me too 😜").format(update.from_user.first_name)
@@ -59,7 +59,7 @@ try:
            LOGGER.exception('Unable to verify user')
        if edit_message:
           await reply('Some thing went wrong while checking please try later')
-       return False
+          return False
 
 
 
