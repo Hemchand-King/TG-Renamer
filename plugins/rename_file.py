@@ -144,17 +144,17 @@ async def rename_doc(bot, update):
 
 
 
-from pyrogram import Client
+#from pyrogram import Client
 
-app = Client(chat_id)
+#app = Client(chat_id)
 
 # Example to stop transmission once the upload progress reaches 50%
 # Useless in practice, but shows how to stop on command
-def progress(reply_message, total, client):
-    if reply_message = /cancel:
+#def progress(reply_message, total, client):
+    #if reply_message = /cancel:
 
-        client.stop_transmission()
+        #client.stop_transmission()
 
-    return True
-else:
-    return False
+   # return True
+#else:
+    #return False
