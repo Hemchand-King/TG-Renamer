@@ -38,7 +38,7 @@ from PIL import Image
 
 
 
-try:
+
     chat = await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
     if chat.status=='kicked':
        if edit_message:
