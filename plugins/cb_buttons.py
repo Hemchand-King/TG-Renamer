@@ -56,7 +56,7 @@ except UserNotParticipant:
                    markup = InlineKeyboardMarkup(button)
                    await reply("""Hai bro you must join my channel for using my bot""",  reply_markup=markup)
 except Exception:
-                LOGGER.exception('Unable to verify user')
+       LOGGER.exception('Unable to verify user')
            if edit_message:
               await reply('Some thing went wrong while checking please try later')
               return False
