@@ -300,7 +300,6 @@ File Size: {}""".format(url, humanbytes(total_length))
 \n**Time Left ⏰ :** {}""".format(round(percentage, 2),
             ''.join(["●" for i in range(math.floor(percentage / 10))]),
             ''.join(["○" for i in range(10 - math.floor(percentage / 10))])
-            )
     humanbytes(total_length),
     humanbytes(downloaded),
     TimeFormatter(time_to_completion)
