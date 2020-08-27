@@ -290,14 +290,12 @@ File Size: {}""".format(url, humanbytes(total_length))
                     estimated_total_time = elapsed_time + time_to_completion
                     try:
                         current_message = """**Download Status**
-URL: {}
-File Size: {}
-Downloaded: {}
-ETA: {}""".format(
-    url,
+\nDownloaded ✅: {}
+\nTotal File Size : {}
+\nTime Left ⏰ : {}""".format(
     humanbytes(total_length),
     humanbytes(downloaded),
-    TimeFormatter(estimated_total_time)
+    TimeFormatter(time_to_completion)
 )
                         if current_message != display_message:
                             await bot.edit_message_text(
