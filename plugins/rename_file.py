@@ -155,6 +155,6 @@ def progress(reply_message, total, client):
 
         client.stop_transmission()
 
-    return = True
+    return True
 else:
-    return = False
+    return False
