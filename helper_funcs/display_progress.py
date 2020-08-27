@@ -36,23 +36,23 @@ async def progress_for_pyrogram(
         percentage = current * 100 / total
         speed = current / diff
         elapsed_time = round(diff) * 1000
-        time_to_completion = round((total - current) / speed) / 60
+        time_to_complete = round((total - current) / speed) / 60
         estimated_total_time = elapsed_time + time_to_completion
 
 
-        if time_to_complete < 1:
-           accurate_time = time_to_complete * 60
-        elif time_to_complete > 60:
-             accurate_time = time_to_complete / 60
-        elif time_to_complete > 1 and time_to_complate <= 60:
-              accurate_time = time_to_complete
+        #if time_to_complete < 1:
+           #accurate_time = time_to_complete * 60
+        $elif time_to_complete > 60:
+             #accurate_time = time_to_complete / 60
+        #elif time_to_complete > 1 and time_to_complate <= 60:
+              #accurate_time = time_to_complete
 
-        if time_to_complete < 1:
-           x = sec
-        elif time_to_complete > 60:
-             x = hours
-        elif time_to_complete > 1 and time_to_complate <= 60:
-              x = min
+        #if time_to_complete < 1:
+           #x = sec
+        #elif time_to_complete > 60:
+             #x = hours
+        #elif time_to_complete > 1 and time_to_complate <= 60:
+              #x = min
 
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
@@ -67,7 +67,7 @@ async def progress_for_pyrogram(
             humanbytes(total),
             humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
-            accurate_time if time_to_completion != '' else "0 s",
+            time_to_complete if time_to_completion != '' else "0 s",
         )
         try:
             await message.edit(
