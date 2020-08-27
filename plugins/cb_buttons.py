@@ -59,7 +59,7 @@ except Exception:
        LOGGER.exception('Unable to verify user')
        if edit_message:
               await reply('Some thing went wrong while checking please try later')
-     return False
+return False
 
 
 
