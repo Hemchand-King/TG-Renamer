@@ -41,11 +41,11 @@ async def progress_for_pyrogram(
 
 
         if time_to_complete < 1:
-        accurate_time = time_to_complete * 60 sec
+           accurate_time = time_to_complete * 60 sec
         elif time_to_complete > 60:
-        accurate_time = time_to_complete / 60 hours
+             accurate_time = time_to_complete / 60 hours
         elif time_to_complate > 1 and time_to_complate <= 60:
-        accurate_time = time_to_complete min
+              accurate_time = time_to_complete min
 
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
