@@ -154,13 +154,13 @@ async def cancel_doc(bot, update):
                ) 
          return False
 
-         except update.reply_message is none:
+        except update.reply_message is none:
              await bot.send_message(
                   chat_id=update.chat.id,
                   text="""Hai **{}** please reply to the message which you wanted to cancel""".format(update.from_user.first_name),
                   reply_to_message_id=update.message_id
                )
-         return True
+        return True
 
-         else:
-         return False
+       else:
+       return False
