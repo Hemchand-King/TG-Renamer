@@ -84,16 +84,8 @@ from pyrogram import Client
 @pyrogram.client.on_message(pyrogram.Filters.command(["cancel"]))
 async def cancel(bot, update):
        if update.reply_to_message is not None:
-           try:
                await bot.send_message(
                      chat_id=update.chat.id,
                      text="Sorry bro I cannot cancel this process now 😔",
                      reply_to_message_id=update.message_id,
                   )
-       elif update.reply_to_message is None:
-           try:
-                await bot.send_message(
-                      chat_id=update.chat.id,
-                      text="Reply to the file you need to stop"",
-                       )
-          
