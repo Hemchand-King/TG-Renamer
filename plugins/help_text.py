@@ -81,7 +81,7 @@ async def upgrade(bot, update):
 
 from pyrogram import Client
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
+@pyrogram.Client.stop_transmission(pyrogram.Filters.command(["cancel"]))
 async def cancel(bot, update):
        if update.reply_to_message is not None:
            await bot.send_message(
