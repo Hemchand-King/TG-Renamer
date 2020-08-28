@@ -66,8 +66,8 @@ async def generate_custom_thumbnail(bot, update):
                     reply_to_message_id=update.message_id
                 )
             try:
-                [os.remove(download_location + i) for i in list_im ]
-                os.remove(download_location)
+               # [os.remove(download_location + i) for i in list_im ]
+               # os.remove(download_location)
             except:
                 pass
         else:
