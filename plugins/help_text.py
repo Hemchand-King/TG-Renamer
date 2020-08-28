@@ -83,16 +83,9 @@ from pyrogram import Client
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["cancel"]))
 async def cancel(bot, update):
-   try:
        if update.reply_to_message is None:
            await bot.send_message(
                  chat_id=update.chat.id,
                  text="Sorry bro this command was not at available",
                  reply_to_message_id=update.message_id,
              )
-        else:
-             await bot.send_message(
-                 chat_id=update.chat.id,
-                 text="Sorry bro this command was not at available",
-                 reply_to_message_id=update.message_id,
-               )
