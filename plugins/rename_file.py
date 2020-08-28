@@ -155,7 +155,7 @@ async def cancel_doc(bot, update):
                    ) 
                 return False
 
-       elif update.reply_message is None:
+       else:
             try:
                  await bot.send_message(
                         chat_id=update.chat.id,
@@ -163,11 +163,3 @@ async def cancel_doc(bot, update):
                         reply_to_message_id=update.message_id
                    )
                  return True 
-
-       else:
-            try:
-                 await bot.send_message(
-                        chat_id=update.chat.id,
-                        text="""An error occurs sorry I cant cancel""",
-                        )
-                 return False 
