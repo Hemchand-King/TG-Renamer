@@ -77,6 +77,9 @@ async def start(bot, update):
          [
           InlineKeyboardButton('Updates Channel 📣', url='https://t.me/anonymousbotupdates'),
           InlineKeyboardButton('Rate me ⭐', url='https://t.me/anonymousbotdiscussion/92')
+         ],
+         [
+         InlineKeyboardButton(text="🤝Help",callback_data="help_back")
          ]
         ]
        )
