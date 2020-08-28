@@ -146,20 +146,22 @@ async def rename_doc(bot, update):
 
 @pyrogram.Client.stop_transmission(pyrogram.Filters.command(["rename"]))
 async def cancel_doc(bot, update):
-         if update.reply_message is not none:
-            await bot.send_message(
-                  chat_id=update.chat.id,
-                  text="""Hai **{}** please reply to the message which you wanted to cancel""".format(update.from_user.first_name),
-                  reply_to_message_id=update.message_id
-               ) 
+         if update.reply_message is not None:
+            try:
+                await bot.send_message(
+                      chat_id=update.chat.id,
+                      text="""Hai **{}** please reply to the message which you wanted to cancel""".format(update.from_user.first_name),
+                      reply_to_message_id=update.message_id
+                   ) 
          return False
 
-        elif update.reply_message is none:
-             await bot.send_message(
-                  chat_id=update.chat.id,
-                  text="""Successfully canceled the file""".format(update.from_user.first_name),
-                  reply_to_message_id=update.message_id
-               )
+        elif update.reply_message is None:
+             try:
+                 await bot.send_message(
+                        chat_id=update.chat.id,
+                        text="""Successfully canceled the file""".format(update.from_user.first_name),
+                         reply_to_message_id=update.message_id
+                   )
         return True
 
        else:
