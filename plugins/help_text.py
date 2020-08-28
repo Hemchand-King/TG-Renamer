@@ -90,7 +90,7 @@ async def cancel(bot, update):
                      text="Sorry bro I cannot cancel this process now 😔",
                      reply_to_message_id=update.message_id,
                   )
-       if update.reply_to_message is None:
+       elif update.reply_to_message is None:
            try:
                 await bot.send_message(
                       chat_id=update.chat.id,
