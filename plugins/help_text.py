@@ -103,8 +103,7 @@ async def donate(bot, update):
         chat_id=update.chat.id,
         text="Nice to listen this words from you {}, but my father don'twant money now he will ask you later 🥰".format(update.from_user.first_name),
         parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
+        
     )
 
 
