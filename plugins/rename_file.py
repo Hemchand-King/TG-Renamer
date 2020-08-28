@@ -156,7 +156,7 @@ async def cancel_doc(bot, update):
                 return False
 
        elif update.reply_message is None:
-          try:
+            try:
                  await bot.send_message(
                         chat_id=update.chat.id,
                         text="""Successfully canceled the file""",
