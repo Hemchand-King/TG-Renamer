@@ -40,19 +40,19 @@ async def progress_for_pyrogram(
         estimated_total_time = elapsed_time + time_to_completion
 
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
-        estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
+        estimated_total_time = TimeFormatter(milliseconds=time_to_completion)
 
-        progress = "[{0}{1}] \nPercentage: {2}%\n".format(
+        progress = "({0}{1})**{2}%**\n\n".format(
             ''.join("●" for i in range(math.floor(percentage / 10))),
             ''.join("○" for i in range(10 - math.floor(percentage / 10))),
             round(percentage, 2))
 
-        tmp = progress + "Done ✅ : {0} \n Total : {1}\nSpeed 🚀: {2}/s\nEstimated Total Time ⏰: {3}\n".format(
+        tmp = progress + "**Done ✅ :** {0} \n**Total :** {1}\n\n**Speed 🚀:** {2}/s\n\n**Time Left ⏰:** {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
-            estimated_total_time if estimated_total_time != '' else "0 s"
+            time_to_completion if estimated_total_time != '' else "0 s"
         )
         try:
             await message.edit(
