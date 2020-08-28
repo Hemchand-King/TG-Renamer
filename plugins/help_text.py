@@ -110,7 +110,7 @@ async def donate(bot, update):
     )
 
 
-
+@run_async
 def help_button(bot: Bot, update: Update):
     query = update.callback_query
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
