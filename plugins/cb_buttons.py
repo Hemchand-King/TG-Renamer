@@ -133,7 +133,7 @@ async def button(bot, update):
         await ddl_call_back(bot, update)
 
 @pyrogram.Client.get_chat_member()
-    if chat.status=='kicked':
+    update.from_user.id in Config.BANNED_USERS:
       if edit_message:
          await reply('😡 hai {} you are banned you are not able to use me').format(update.from_user.first_name)
       return False
