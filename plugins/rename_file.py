@@ -153,6 +153,7 @@ async def cancel_doc(bot, update):
                   reply_to_message_id=update.message_id
                ) 
          return False
+
          elif update.reply_message is none:
              await bot.send_message(
                   chat_id=update.chat.id,
@@ -160,5 +161,6 @@ async def cancel_doc(bot, update):
                   reply_to_message_id=update.message_id
                )
          return True
+
          else:
          return False
