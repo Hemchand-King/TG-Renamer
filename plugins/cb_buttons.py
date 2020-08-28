@@ -133,7 +133,7 @@ async def button(bot, update):
         await ddl_call_back(bot, update)
 
 try:
-    chat = await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
+    await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
     if chat.status=='kicked':
       if edit_message:
          await reply('😡 hai {} you are banned you are not able to use me').format(update.from_user.first_name)
