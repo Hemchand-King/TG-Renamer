@@ -96,7 +96,7 @@ async def upgrade(bot, update):
         disable_web_page_preview=True
     )
 
-@pyrogram.Client.on_message(pyrogram.Filters["donate"])
+@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
 async def donate(bot, update):
     # logger.info(update)
     await bot.send_message(
