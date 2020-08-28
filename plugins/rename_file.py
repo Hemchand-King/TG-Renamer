@@ -144,7 +144,7 @@ async def rename_doc(bot, update):
 
 
 
-@pyrogram.Client.stop_transmission(pyrogram.Filters.command(["rename"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def cancel_doc(bot, update):
        if update.reply_message is not None:
             try:
