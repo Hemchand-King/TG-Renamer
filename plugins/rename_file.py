@@ -153,7 +153,7 @@ async def cancel_doc(bot, update):
                       text="""Hai **{}** please reply to the message which you wanted to cancel""".format(update.from_user.first_name),
                       reply_to_message_id=update.message_id
                    ) 
-            return
+            return False
 
         elif update.reply_message is None:
              try:
@@ -162,7 +162,7 @@ async def cancel_doc(bot, update):
                         text="""Successfully canceled the file""",
                         reply_to_message_id=update.message_id
                    )
-             return
+             return True 
 
        else:
             try:
@@ -170,3 +170,4 @@ async def cancel_doc(bot, update):
                         chat_id=update.chat.id,
                         text="""An error occurs sorry I cant cancel""",
                         )
+             return False 
