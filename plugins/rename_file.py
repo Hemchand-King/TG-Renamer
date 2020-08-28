@@ -146,4 +146,4 @@ from pyrogram import Client
 def cancel(current, total, client):
     if (current * 100 / total) > 50:
 
-        client.stop_transmission()
+        cancel.stop_transmission()
