@@ -132,7 +132,7 @@ async def button(bot, update):
     elif "=" in cb_data:
         await ddl_call_back(bot, update)
 
-
+Import pyrogram 
 chat = await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
 try:
     if chat.status=='kicked':
