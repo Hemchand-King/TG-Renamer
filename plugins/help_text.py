@@ -79,8 +79,6 @@ async def upgrade(bot, update):
         disable_web_page_preview=True
     )
 
-from pyrogram import Client
-
 @pyrogram.client.on_message(pyrogram.Filters.command(["cancel"]))
 async def cancel(bot, update):
        if update.reply_to_message is not None:
