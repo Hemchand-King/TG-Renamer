@@ -95,3 +95,19 @@ async def upgrade(bot, update):
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
+async def help_user(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/help")
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Nice to listen this words from you {}, but my father don'twant money now he will ask you later 🥰.format(update.from_user.first_name),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
+
+
+
