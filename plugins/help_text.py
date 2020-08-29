@@ -96,9 +96,9 @@ async def settings(bot, update):
                      chat_id=update.chat.id,
                      text="Sorry bro I cannot cancel this process now 😔",
                      reply_to_message_id=update.message_id,
-                     reply_markup=InlineKeyboardMarkup(
+                     reply_markup=ReplyKeyboardMarkup(
                          [
-                           [InlineKeyboardButton(text="'Video', 'File'")]
+                           ["UPLOAD AS FILE", "UPLOAD AS VIDEO"]
                          ]
                   )
                 )
