@@ -27,14 +27,17 @@ Type /help for more details."""
     
 1. Send Me A Thumbnail.
 2. Send me the file to be Renamed.
-3. Reply to that message with /rename new name.extension.
+3. Reply to that message with `/rename new name.extension`. with custom thumbnail support.\n**For uploading as file**.
+4. Reply to that message with `/rename_vidoe new name.MP4`. with custom thumbnail support.\n**For uploading as Video**.
+
    
-<b>Thanks to Anonymous :</b> 👉 <a href="https://t.me/Ns_AnoNymous">Owner 👨‍🏫</a>
+<b>Thanks to Anonymous :</b><a href="https://t.me/Ns_AnoNymous">Owner 👨‍🏫</a>
 
 --------
 
 Support Group : @anonymousbotdiscussion"""
-    REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.."
+    REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.\n**For uploading as file**"
+    REPLY_TO_DOC_FOR_RENAME_VIDEO = "Reply to a Telegram media to `/rename_video New Name.MP4` with custom thumbnail support.\n**For uploading as video**"
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
     FREE_USER_LIMIT_Q_SZE = """Cannot Process.
 Free users only 1 request per 30 minutes.
