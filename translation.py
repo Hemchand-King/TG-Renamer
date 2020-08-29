@@ -1,8 +1,7 @@
 class Translation(object):
     START_TEXT = """Hello <i><b>{}</b></i>,
 
-This is a Telegram Rename Bot by <a href='https://t.me/Ns_AnoNymous'>Anonymous 👨‍💻</a>
-
+This is a Telegram Rename Bot by Anonymous 👨‍💻
 I Can rename 📝 with custom thumbnail and upload as video/file
 
 Type /help for more details."""
@@ -25,7 +24,7 @@ Type /help for more details."""
     CUSTOM_CAPTION_UL_FILE = "<b>{}</b> \n\n@renamer23_bot"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
-    HELP_USER = """Hai <b><i>{}</i></b>, I am Renamer bot 📝 by <a href="https://t.me/Ns_AnoNymouS">anonymous 👨‍🏫<\a>
+    HELP_USER = """Hai <b><i>{}</i></b>, I am Renamer bot 📝 by <a href="https://t.me/Ns_AnoNymouS">anonymous 👨‍🏫</a>
     
 1. Send Me A Thumbnail.
 
@@ -36,7 +35,7 @@ Type /help for more details."""
 4. Reply to that message with <code>/rename_vidoe new name.MP4</code>. with custom thumbnail support.\n(uploading as Video)
 
    
-<b>Thanks to Anonymous :</b><a href="https://t.me/Ns_AnoNymous">Owner 👨‍🏫</a>
+<b>Thanks to My Boss :</b><a href="https://t.me/Ns_AnoNymous">Owner 👨‍🏫</a>
 
 --------
 
