@@ -56,11 +56,14 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
         [
           [
-          InlineKeyboardButton('My Father 🧛‍♂️', url='https://t.me/Ns_AnoNymous'),
+          InlineKeyboardButton('My Father 👨‍💻', url='https://t.me/Ns_AnoNymous'),
           InlineKeyboardButton('Discuss 🗣', url='https://t.me/anonymousbotdiscussion')
           ],
           [
           InlineKeyboardButton('Updates channel 📢', url='https://t.me/anonymousbotupdates')
+          ],
+          [
+          InlineKeyboardButton('Rate Me ⭐', url='https://t.me/anonymousbotdiscussion/215')
           ]
         ]
       )
