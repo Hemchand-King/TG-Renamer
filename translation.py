@@ -2,9 +2,8 @@ class Translation(object):
     START_TEXT = """Hello <i><b>{}</b></i>,
 
 
-This is a Telegram File 2 video convert bot
+This is a Telegram File 2 video or video 2 file convert bot
 
-You can convert any Telegram Document, using this bot! With custom thumbnail
 
 Please send /help to know how to use me
 
@@ -31,16 +30,17 @@ These are you current plane details 👇
 <b>Telegram ID: </b><code>{}</code>
 <b>Plan name:</b> Unlimited 😳
 <b>Expires on: </b>🤷‍♂️"""
-    HELP_USER = """Hi {} I am a File 📁 2 Video 📹 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
+    HELP_USER = """Hi {} I am a File 📁 2 Video 📹 or Video 📹 2 File 📁 converted bot by <a href='https://t.me/Ns_Anonymous'>Anonymous 👨‍🏫 </a>
 
 
 <b>How to use me :</b>
-         1.Send me the TG file which\n         you need to convert as file.
+1.Send me the TG file or video which you need to convert.
 
-         2.Reply the file with \n         /converttovideo.\n\n(If you don't know how to reply for a message as in this <a href='https://t.me/anonymousbotsupporte'>group 👥</a>
+2.If it is a file reply the file with /converttovideo.\n\n(If you don't know how to reply for a message ask in this <a href='https://t.me/anonymousbotsupporte'>group 👥</a>
 
-         3.Please be patience till the file 
-         convert.
+3.If it is a file reply the file with /converttofile.
+
+3.Please be patience till the file/video convert.
 
 If the bot was not working contact <a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍🏫 </a>
 """
