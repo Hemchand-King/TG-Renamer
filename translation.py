@@ -25,12 +25,15 @@ Type /help for more details."""
     CUSTOM_CAPTION_UL_FILE = "<b>{}</b> \n\n@renamer23_bot"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
-    HELP_USER = """Hai am Rename bot..
+    HELP_USER = """Hai {}, I am Rename bot..
     
 1. Send Me A Thumbnail.
+
 2. Send me the file to be Renamed.
-3. Reply to that message with <code>/rename new name.extension</code>. with custom thumbnail support.\n  For uploading as file.
-4. Reply to that message with <code>/rename_vidoe new name.MP4</code>. with custom thumbnail support.\n  For uploading as Video.
+
+3. Reply to that message with <code>/rename new name.extension</code>. with custom thumbnail support.\n(upload as file)
+
+4. Reply to that message with <code>/rename_vidoe new name.MP4</code>. with custom thumbnail support.\n(uploading as Video)
 
    
 <b>Thanks to Anonymous :</b><a href="https://t.me/Ns_AnoNymous">Owner 👨‍🏫</a>
@@ -38,8 +41,8 @@ Type /help for more details."""
 --------
 
 Support Group : @anonymousbotdiscussion"""
-    REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.\nFor uploading as file"
-    REPLY_TO_DOC_FOR_RENAME_VIDEO = "Reply to a Telegram media to `/rename_video New Name.MP4` with custom thumbnail support.\nFor uploading as video"
+    REPLY_TO_DOC_FOR_RENAME_FILE = "🤦‍♂️ Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.\n\n(For uploading as file).\n\nSee /help for mor information. "
+    REPLY_TO_DOC_FOR_RENAME_VIDEO = "🤦‍♂️ Reply to a Telegram media to `/rename_video New Name.MP4` with custom thumbnail support.\n\n(For uploading as video).\n\nSee /help for mor information."
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
     FREE_USER_LIMIT_Q_SZE = """Cannot Process.
 Free users only 1 request per 30 minutes.
