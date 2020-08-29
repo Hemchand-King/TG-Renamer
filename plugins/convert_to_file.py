@@ -125,7 +125,7 @@ async def convert_to_file(bot, update):
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
-                    a,
+                    b,
                     c_time
                 )
             )
