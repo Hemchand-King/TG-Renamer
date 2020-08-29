@@ -142,9 +142,6 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
 from pyrogram import Client
-
-@pyrogram.on_callback_query(pyrogram.Filter.command(["cancel"]))
-
 def cancel(current, total, client):
     if (current * 100 / total) > 50:
 
