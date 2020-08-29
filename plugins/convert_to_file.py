@@ -115,7 +115,7 @@ async def convert_to_file(bot, update):
                 chat_id=update.chat.id,
                 document=the_real_download_location,
                 caption=description,
-                duration=duration,
+                #duration=duration,
                 width=width,
                 height=height,
                 #supports_streaming=True,
