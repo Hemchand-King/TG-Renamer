@@ -142,8 +142,7 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
 from pyrogram import Client
-async def cancel.stop_transmission(current, total, client):
+async def cancel(current, total, client):
     if (current * 100 / total) > 50:
 
         cancel.stop_transmission()
-print(cancel.stop_transmission())
