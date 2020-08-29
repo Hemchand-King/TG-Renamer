@@ -115,7 +115,6 @@ async def convert_to_video(bot, update):
                 chat_id=update.chat.id,
                 video=the_real_download_location,
                 caption=description,
-                streamable=True
                 duration=duration,
                 width=width,
                 height=height,
