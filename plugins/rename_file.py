@@ -186,7 +186,7 @@ async def rename_video(bot, update):
                 await bot.edit_message_text(
                     text=Translation.SAVED_RECVD_DOC_FILE,
                     chat_id=update.chat.id,
-                    message_id=a.message_id
+                    message_id=b.message_id
                 )
             except:
                 pass
