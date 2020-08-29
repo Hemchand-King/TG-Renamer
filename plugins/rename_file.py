@@ -143,6 +143,17 @@ async def rename_doc(bot, update):
         )
 from pyrogram import Client
 
+app = Client("my_bot", bot_token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
+
+
+@pyrogram.on_callback_query(pyrogram.Filter.command(["cancel"]))
+
+def cancel(client, callback_query):
+    callback_query.answer(f"Button contains: '{callback_query.help}'", show_alert=True)
+
+
+bot.run()  # Automatically start() and idle()
+
 def cancel(current, total, client):
     if (current * 100 / total) > 50:
 
