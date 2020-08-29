@@ -46,7 +46,7 @@ async def convert_to_video(bot, update):
         download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.DOWNLOAD_START,
+            text="Analyzing File....😁,
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
