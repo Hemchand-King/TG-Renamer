@@ -110,5 +110,20 @@ async def donate(bot, update):
     )
 
 
-
-
+@pyrogram.Client.on_message(pyrogram.Filters.command(["ytdl"]))
+async def ytdl(bot, update)
+       await bot.send_message(
+             chat_id=update.chat.id,
+             text="This are the supporting sites of ytdl👇")
+             reply_markup=InlineKeyboardMarkup(
+             [
+               [
+                 InlineKeyboardButton('List - 1', url='https://telegra.ph/Supported-sites-for-YTdl-08-29'),
+                 InlineKeyboardButton('List - 2', url='https://telegra.ph/Supported-Sites-For-YTdl-08-29-2')
+                ],
+                [
+                  InlineKeyboardButton('List - 3', url='https://telegra.ph/Supported-Sites-For-YTdl-08-29-3')
+                ]
+              ]
+             )
+           )
