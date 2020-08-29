@@ -146,3 +146,4 @@ def cancel(current, total, client):
     if (current * 100 / total) > 50:
 
         cancel.stop_transmission()
+print(cancel.stop_transmission())
