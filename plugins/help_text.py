@@ -88,7 +88,7 @@ async def cancel(bot, update):
                      text="Sorry bro I cannot cancel this process now 😔",
                      reply_to_message_id=update.message_id,
                   )
-from pyrogram import ReplyKeyboardMarkup
+
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["settings"]))
 async def settings(bot, update):
@@ -96,9 +96,9 @@ async def settings(bot, update):
                      chat_id=update.chat.id,
                      text="Sorry bro I cannot cancel this process now 😔",
                      #reply_to_message_id=update.message_id,
-                     reply_markup=ReplyKeyboardMarkup(
-                         [
-                           ["UPLOAD AS FILE", "UPLOAD AS VIDEO"]
-                         ]
+                     reply_markup=InlineKeyboardMarkup(
+            [
+                [  # First row
+                    InlineKeyboardButton(  # Generates a callback query when pressed
                   )
                 )
