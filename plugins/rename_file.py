@@ -142,7 +142,7 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
 async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
@@ -194,6 +194,7 @@ async def rename_doc(bot, update):
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
+                supports_streaming=True,
                 message_id=a.message_id
                 )
             logger.info(the_real_download_location)
@@ -219,13 +220,14 @@ async def rename_doc(bot, update):
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
             c_time = time.time()
-            await bot.send_document(
+            await bot.send_video(
                 chat_id=update.chat.id,
                 document=new_file_name,
                 thumb=thumb_image_path,
                 caption=description.format(new_file_name[12:-4]),
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
+                supports_streaming=True,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
