@@ -97,8 +97,11 @@ async def settings(bot, update):
                      text="Sorry bro I cannot cancel this process now 😔",
                      #reply_to_message_id=update.message_id,
                      reply_markup=InlineKeyboardMarkup(
-            [
+             [
                 [  # First row
                     InlineKeyboardButton(  # Generates a callback query when pressed
                   )
-                )
+                 ]
+             ]
+           )
+         )
