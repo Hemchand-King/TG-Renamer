@@ -195,7 +195,7 @@ async def rename_video(bot, update):
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
-                message_id=a.message_id
+                message_id=b.message_id
                 )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
@@ -243,7 +243,7 @@ async def rename_video(bot, update):
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
-                message_id=a.message_id,
+                message_id=b.message_id,
                 disable_web_page_preview=True
             )
     else:
