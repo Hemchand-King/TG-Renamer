@@ -100,8 +100,10 @@ async def settings(bot, update):
              [
                 [  # First row
                     InlineKeyboardButton(  # Generates a callback query when pressed
+                        "Button",
+                        callback_data="data"
                   )
-                 ]
+                ]
              ]
            )
          )
