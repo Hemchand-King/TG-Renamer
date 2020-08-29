@@ -164,7 +164,7 @@ async def rename_doc(bot, update):
             return
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        a = await bot.send_message(
+        b = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
@@ -174,9 +174,10 @@ async def rename_doc(bot, update):
             message=update.reply_to_message,
             file_name=download_location,
             progress=progress_for_pyrogram,
+            stream=True,
             progress_args=(
                 Translation.DOWNLOAD_START,
-                a,
+                b,
                 c_time
             )
         )
@@ -194,7 +195,7 @@ async def rename_doc(bot, update):
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
-                supports_streaming=True,
+                stream=True,
                 message_id=a.message_id
                 )
             logger.info(the_real_download_location)
@@ -227,7 +228,7 @@ async def rename_doc(bot, update):
                 caption=description.format(new_file_name[12:-4]),
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
-                supports_streaming=True,
+                stream=True,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
