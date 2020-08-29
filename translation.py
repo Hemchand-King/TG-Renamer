@@ -2,6 +2,7 @@ class Translation(object):
     START_TEXT = """Hello <i><b>{}</b></i>,
 
 This is a Telegram Rename Bot by Anonymous 👨‍💻
+
 I Can rename ✍ with custom thumbnail and upload as video/file
 
 Type /help for more details."""
