@@ -46,7 +46,7 @@ async def convert_to_file(bot, update):
         download_location = Config.DOWNLOAD_LOCATION + "/"
         b = await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.DOWNLOAD_START,
+            text="Analyzing Video.....😃",
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
@@ -124,7 +124,7 @@ async def convert_to_file(bot, update):
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    Translation.UPLOAD_START,
+                    Translation.UPLOAD_START_VIDEO,
                     b,
                     c_time
                 )
