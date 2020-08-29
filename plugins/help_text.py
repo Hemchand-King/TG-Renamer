@@ -95,7 +95,7 @@ async def settings(bot, update):
                      reply_to_message_id=update.message_id,
                      reply_markup=InlineKeyboardMarkup(
                          [
-                           [InlineKeyboardButton("Mode",text="Video")]
+                           [InlineKeyboardButton("Mode",text="'Video', 'File'")]
                          ]
                   )
                 )
