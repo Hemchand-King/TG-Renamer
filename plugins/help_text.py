@@ -111,7 +111,7 @@ async def donate(bot, update):
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ytdl"]))
-async def ytdl(bot, update)
+async def ytdl(bot, update):
        await bot.send_message(
              chat_id=update.chat.id,
              text="This are the supporting sites of ytdl👇")
