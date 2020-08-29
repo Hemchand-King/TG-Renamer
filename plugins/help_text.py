@@ -98,3 +98,4 @@ async def settings(bot, update):
                            [InlineKeyboardButton("Mode",text="Video")]
                          ]
                   )
+                )
