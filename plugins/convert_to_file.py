@@ -137,7 +137,7 @@ async def convert_to_file(bot, update):
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
-                message_id=a.message_id,
+                message_id=b.message_id,
                 disable_web_page_preview=True
             )
     else:
