@@ -193,7 +193,7 @@ async def rename_video(bot, update):
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
-                text=Translation.UPLOAD_START,
+                text=Translation.UPLOAD_START_VIDEO,
                 chat_id=update.chat.id,
                 message_id=b.message_id
                 )
@@ -249,6 +249,6 @@ async def rename_video(bot, update):
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
+            text=Translation.REPLY_TO_DOC_FOR_RENAME_VIDEO,
             reply_to_message_id=update.message_id
         )
