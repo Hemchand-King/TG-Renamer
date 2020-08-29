@@ -88,6 +88,8 @@ async def cancel(bot, update):
                      text="Sorry bro I cannot cancel this process now 😔",
                      reply_to_message_id=update.message_id,
                   )
+from pyrogram import ReplyKeyboardMarkup
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["settings"]))
 async def settings(bot, update):
                await bot.send_message(
