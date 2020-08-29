@@ -55,7 +55,7 @@ async def convert_to_file(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START,
+                Translation.DOWNLOAD_START_VIDEO,
                 b,
                 c_time
             )
