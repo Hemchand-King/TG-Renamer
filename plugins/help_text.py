@@ -109,6 +109,7 @@ async def donate(bot, update):
         
     )
 
+from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ytdl"]))
 async def ytdl(bot, update):
