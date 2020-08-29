@@ -107,3 +107,9 @@ async def settings(bot, update):
              ]
            )
          )
+from pyrogram import Client
+
+@pyrogram.on_callback_query(pyrogram.Filters.command(["settings"]))
+def settings(client, callback_query):
+    callback_query.answer(f"Button contains: '{callback_query.data}'", show_alert=True)
+
