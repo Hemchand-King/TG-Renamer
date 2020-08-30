@@ -91,9 +91,9 @@ async def rename_video(bot, update):
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
-                    width = metadata.get("width")
+                    width_video = metadata.get("width")
                 if metadata.has("height"):
-                    height = metadata.get("height")
+                    height_videi = metadata.get("height")
                 if metadata.has("duration"):
                     duration = metadata.get("duration")
                 # resize image
@@ -111,8 +111,8 @@ async def rename_video(bot, update):
                 chat_id=update.chat.id,
                 document=new_file_name,
                 thumb=thumb_image_path,
-                width=width,
-                height=height,
+                width=width_video,
+                height=height_video,
                 duration=duration,
                 caption=description.format(new_file_name[12:-4]),
                 # reply_markup=reply_markup,
