@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, Filters, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, ForceReply
-from info import PROCESSING_MSG
+
 
 import logging
 logger = logging.getLogger(__name__)
