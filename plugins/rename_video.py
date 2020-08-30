@@ -27,8 +27,9 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
-async def rename_video(bot, update):
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
+async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
@@ -36,7 +37,7 @@ async def rename_video(bot, update):
             revoke=True
         )
         return
-    TRChatBase(update.from_user.id, update.text, "rename_video")
+    TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 6400:
@@ -60,7 +61,7 @@ async def rename_video(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START_VIDEO,
+                Translation.DOWNLOAD_START,
                 b,
                 c_time
             )
@@ -70,20 +71,19 @@ async def rename_video(bot, update):
                 await bot.edit_message_text(
                     text=Translation.SAVED_RECVD_DOC_FILE,
                     chat_id=update.chat.id,
-                    message_id=b.message_id
+                    message_id=a.message_id
                 )
             except:
                 pass
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
-                text=Translation.UPLOAD_START_VIDEO,
+                text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
-                message_id=b.message_id
+                message_id=a.message_id
                 )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-            metadata = extractMetadata(createParser(the_real_download_location))
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = None
             else:
@@ -95,7 +95,7 @@ async def rename_video(bot, update):
                 if metadata.has("height"):
                     height = metadata.get("height")
                 if metadata.has("duration"):
-                   duration = metadata.get('duration').seconds
+                    duration = metadata.get("duration")
                 # resize image
                 # ref: https://t.me/PyrogramChat/44663
                 # https://stackoverflow.com/a/21669827/4723940
@@ -107,16 +107,15 @@ async def rename_video(bot, update):
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
             c_time = time.time()
-            await bot.send_video(
+            await bot.send_Video(
                 chat_id=update.chat.id,
-                video=new_file_name,
-                #duration=duration,
+                document=new_file_name,
                 thumb=thumb_image_path,
                 width=width,
                 height=height,
+                duration=duration,
                 caption=description.format(new_file_name[12:-4]),
                 # reply_markup=reply_markup,
-                supports_streaming=True,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
@@ -133,12 +132,14 @@ async def rename_video(bot, update):
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
-                message_id=b.message_id,
+                message_id=a.message_id,
                 disable_web_page_preview=True
             )
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.REPLY_TO_DOC_FOR_RENAME_VIDEO,
+            text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
+
+
