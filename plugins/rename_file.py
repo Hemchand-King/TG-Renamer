@@ -199,6 +199,9 @@ async def rename_video(bot, update):
                 )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            metadata = extractMetadata(createParser(the_real_download_location))
+            if metadata.has("duration"):
+                duration = metadata.get('duration').seconds
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = None
             else:
