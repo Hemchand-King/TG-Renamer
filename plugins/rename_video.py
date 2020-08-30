@@ -75,7 +75,7 @@ async def rename_video(bot, update):
             except:
                 pass
             new_file_name = download_location + file_name
-            os.rename_video(the_real_download_location, new_file_name)
+            os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START_VIDEO,
                 chat_id=update.chat.id,
@@ -84,8 +84,6 @@ async def rename_video(bot, update):
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             metadata = extractMetadata(createParser(the_real_download_location))
-            if metadata.has("duration"):
-                duration = metadata.get('duration').seconds
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = None
             else:
@@ -96,6 +94,8 @@ async def rename_video(bot, update):
                     width = metadata.get("width")
                 if metadata.has("height"):
                     height = metadata.get("height")
+                if metadata.has("duration"):
+                   duration = metadata.get('duration').seconds
                 # resize image
                 # ref: https://t.me/PyrogramChat/44663
                 # https://stackoverflow.com/a/21669827/4723940
