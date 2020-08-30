@@ -46,3 +46,49 @@ async def settings(bot, message):
     msg = await message.reply(PROCESSING_MSG, quote=True)
     chat_id = message.chat.id
     try:
+        user = await get_userdata(chat_id, required_fields)
+    except:
+        logger.exception('Database error in bot settings')
+        await msg.edit('**Something went wrong!**\n\nPlease report this issue on @botxSupport')
+    else:
+        markup = make_setting_kb(user)
+        await msg.edit(setting_text, reply_markup=markup, parse_mode='html')
+
+
+
+@Client.on_callback_query(Filters.regex(r'^updates\|(True|False)'))
+async def bot_updates_setting(bot, update):
+
+    chat_id = update.from_user.id
+    receive_updates = True if 'True' in update.data else False
+    user = await get_userdata(chat_id, required_fields)
+    user.receive_updates = receive_updates
+    if receive_updates:
+        await update.answer()
+    else:
+        await update.answer('You will no longer receive bot updates (not recommended)',
+                            show_alert=True)
+        
+    markup = make_setting_kb(user)
+    await asyncio.gather(
+        user.commit(),
+        update.message.edit(setting_text, reply_markup=markup, parse_mode='html'))
+
+
+@Client.on_callback_query(Filters.regex(r'^(stream_video|screenshot)\|(True|False)'))
+async def change_setting(bot, update):
+
+    await update.answer()
+    chat_id = update.from_user.id
+    key = update.data.split('|')[0]
+    value = True if 'True' in update.data else False
+    user = await get_userdata(chat_id, required_fields)
+    user[key] = value
+    markup = make_setting_kb(user)
+    await asyncio.gather(
+        user.commit(),
+        update.message.edit(setting_text, reply_markup=markup, parse_mode='html'))
+
+
+@Client.on_callback_query(Filters.regex(r'^thumbnail\|(True|False)'))
+async def thumbnail_setting(bot, update):
