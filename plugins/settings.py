@@ -92,3 +92,35 @@ async def change_setting(bot, update):
 
 @Client.on_callback_query(Filters.regex(r'^thumbnail\|(True|False)'))
 async def thumbnail_setting(bot, update):
+
+    chat_id = update.from_user.id
+    value = True if 'True' in update.data else False
+
+    if not value:
+        await update.answer(
+            'Send photo or reply /set_thumbnail to any photo to set it as a custom thumbnail', 
+            show_alert=True)
+    else:
+        user = await get_userdata(chat_id, required_fields)
+        try:
+            await asyncio.gather(
+                update.answer(),
+                bot.send_photo(chat_id, user.thumbnail, caption='👆 Custom thumbnail'))
+        except:
+            # logger.exception('Failed to send thumbnail')
+            user.thumbnail = None
+            await user.commit()
+            markup = make_setting_kb(user)
+            await asyncio.gather(
+                update.answer('You have to set custom thumbnail again', show_alert=True),
+                update.message.edit(setting_text, reply_markup=markup, parse_mode='html'))
+
+
+async def get_userdata(chat_id, required_fields=None):
+
+    fields = {} if required_fields is None else required_fields
+    user = await User.find_one({'chat_id': chat_id}, fields)
+    if not user:
+        user = User(chat_id=chat_id)
+        await user.commit()
+    return user
