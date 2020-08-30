@@ -1,6 +1,5 @@
 import asyncio
 from pyrogram import Client, Filters, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, ForceReply
-from utils import User
 from info import PROCESSING_MSG
 
 import logging
