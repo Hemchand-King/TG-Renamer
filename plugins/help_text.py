@@ -93,20 +93,17 @@ async def upgrade(bot, update):
     TRChatBase(update.from_user.id, update.text, "/upgrade")
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.UPGRADE_TEXT,
+        text="There is no upgrade plan till now if you want to donate please don't by pressing bottom button" ,
         parse_mode="html",
-        reply_to_message_id=update.message_id,
-        disable_web_page_preview=True
-    )
-
-@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
-async def donate(bot, update):
-    # logger.info(update)
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text="Nice to listen this words from you {}, but my father don't want money now he will ask you later 🥰".format(update.from_user.first_name),
-        parse_mode="html",
-        
+        #reply_to_message_id=update.message_id,
+        disable_web_page_preview=True,
+             reply_markup=InlineKeyboardMarkup(
+             [
+               [
+                 InlineKeyboardButton('Donate 💰', url='http://paypal.me/maheshmalekar')
+               ]
+             ]
+           )
     )
 
 from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup 
@@ -128,3 +125,17 @@ async def ytdl(bot, update):
               ]
              )
            )
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
+async def donate(bot, update):
+       await bot.send_message(
+             chat_id=update.chat.id,
+             text="I am very happy to listen you this word, making of this bot take lot of work and time so please donate by pressing this button present below",
+             reply_markup=InlineKeyboardMarkup(
+             [
+               [
+                 InlineKeyboardButton('Donate 💰', url='http://paypal.me/maheshmalekar')
+               ]
+             ]
+           )
+          )
