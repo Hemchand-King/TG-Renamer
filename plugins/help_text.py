@@ -107,3 +107,16 @@ async def settings(bot, update):
              ]
            )
          )
+@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
+async def donate(bot, update):
+       await bot.send_message(
+             chat_id=update.chat.id,
+             text="I am very happy to listen you this word, making of this bot take lot of work and time so please donate by pressing this button present below",
+             reply_markup=InlineKeyboardMarkup(
+             [
+               [
+                 InlineKeyboardButton('Donate 💰', url='http://paypal.me/maheshmalekar')
+               ]
+             ]
+           )
+          )
