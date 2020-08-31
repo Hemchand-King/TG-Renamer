@@ -138,7 +138,7 @@ async def ban(bot, update):
    if update.from_user.id in Owner_id:
       await bot.send_message(
         chat_id=update.chat.id,
-        text='User with ID {} Was banned from using your bot successfully'.format(banid)
+        text='User with ID [{1}](tg://user?id={0}) Was banned from using your bot successfully'.format(banid, banid.first_name)
         )
 
    return Config.BANNED_USERS.append('banid')
