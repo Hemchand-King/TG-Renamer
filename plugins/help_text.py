@@ -141,5 +141,5 @@ async def ban(bot, update):
         text='User with ID {} Was banned from using your bot successfully'.format(banid)
         )
 
-   return Config.BANNED_USERS.append('banid')
+   return Config.BANNED_USERS.append(banid)
 
