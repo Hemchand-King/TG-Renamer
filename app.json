@@ -24,6 +24,11 @@
     },
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string.",
+      "value": "",
+      "required" : true
+    },
+    "OWNER_ID": {
+      "description": "Get this value from @missrose",
       "value": ""
     },
     "CHAT_BASE_TOKEN": {
