@@ -111,5 +111,3 @@ async def donate(bot, update):
              ]
            )
           )
-
-from sample_config import Banned_
