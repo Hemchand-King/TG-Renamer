@@ -3,21 +3,6 @@
 # (c) Shrimadhav U K
 
 # the logging things
-
-
-from pyrogram import Client, Filters
-
-from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import progress_for_pyrogram
-
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-# https://stackoverflow.com/a/37631799/4723940
-from PIL import Image
-
-
-
-
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -145,7 +130,7 @@ async def ban(bot, update, Owner_id):
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
 async def ban(bot, update, Owner_id):
-   TRChatBase(update.from_user.id, update.text, "/unban")
+ TRChatBase(update.from_user.id, update.text, "/unban")
    unbanid = int(update.text.split(' ', 1)[1])
    if update.from_user.id in Owner_id:
      if unbanid in BANNED_USERS:
