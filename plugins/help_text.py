@@ -117,7 +117,8 @@ async def donate(bot, update):
    if update.from_user.id is '1337144652':
       await bot.send_message(
         chat_id=update.chat.id,
-        text='User with ID {} Was banned from using your bot successfully'.formate(banid)
+        text='User with ID {} Was banned from using your bot successfully'.formate(banid),
+        
 
 
 
