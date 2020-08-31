@@ -113,7 +113,7 @@ async def donate(bot, update):
           )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
-  banid = update_text.split(" ", 1)
+  banid = update.text.split(" ", 1)
    if update.from_user.id is '1337144652':
       await bot.send_message(
         chat_id=update.chat.id,
