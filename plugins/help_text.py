@@ -128,6 +128,8 @@ async def ban(bot, update):
 
    return Config.BANNED_USERS.append(banid)
 
+from sample_config import Config
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
 async def unban(bot, update):
    unbanid = int(update.text.split(' ', 1)[1])
