@@ -112,13 +112,15 @@ async def donate(bot, update):
            )
           )
 
+from sample_config import BANNED_USERS
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
   banid = update.text.split(" ", 1)
    if update.from_user.id is '1337144652':
       await bot.send_message(
         chat_id=update.chat.id,
-        text='User with ID {} Was banned from using your bot successfully'.formate(banid),
-        
+        text='User with ID {} Was banned from using your bot successfully'.formate(banid)
+        )
 
-   return BANNED_USERS.apend
+   return sample_config.BANNED_USERS.apend
 
