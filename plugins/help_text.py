@@ -127,7 +127,7 @@ async def donate(bot, update):
            )
           )
 
-Owner_id = '1337144652'
+Owner_id = [1337144652]
 
 from sample_config import Config
 
