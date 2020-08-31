@@ -144,3 +144,4 @@ async def ban(bot, update, Owner_id):
         chat_id=update.chat.id,
         text='User with ID {} Was not an banned user'.format(unbanid)
         )
+      return False 
