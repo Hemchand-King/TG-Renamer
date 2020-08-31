@@ -45,7 +45,7 @@
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
-      "value": "",
+      "value": "871894322",
       "required": false
     }
   },
