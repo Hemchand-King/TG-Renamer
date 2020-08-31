@@ -1,7 +1,7 @@
 import logging
 import traceback
 
-from pyrogram import filters as Filters
+from pyrogram import Filters
 
 from bot.config import Config
 from bot.screenshotbot import ScreenShotBot
