@@ -139,9 +139,9 @@ async def unban(bot, update):
         text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
         )
       return Config.BANNED_USERS.remove(unbanid)
-    else:
+     else:
        await bot.send_message(
         chat_id=update.chat.id,
         text='User with ID {} Was not an banned user'.format(unbanid)
         )
-    return False
+     return False
