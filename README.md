@@ -23,3 +23,5 @@ ban - (admins command) For banning users
 unban - (admins command) For unbanning users
 ```
 
+#### Requirements
+1.
