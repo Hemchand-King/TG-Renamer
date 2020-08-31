@@ -122,5 +122,5 @@ from sample_config import BANNED_USERS
         text='User with ID {} Was banned from using your bot successfully'.formate(banid)
         )
 
-   return sample_config.BANNED_USERS.apend
+   return sample_config.BANNED_USERS.append(' banid')
 
