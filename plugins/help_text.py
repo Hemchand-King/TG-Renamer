@@ -111,3 +111,9 @@ async def donate(bot, update):
              ]
            )
           )
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
+   if update.from_user is 
+
+
+
