@@ -120,5 +120,5 @@ async def donate(bot, update):
         text='User with ID {} Was banned from using your bot successfully'.formate(banid),
         
 
-
+   return BANNED_USERS.apend
 
