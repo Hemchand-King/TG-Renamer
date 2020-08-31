@@ -27,4 +27,5 @@ unban - (admins command) For unbanning users
 1.Get API_HASH from https://my.telegram.org 
 2.Get APP_ID from https://my.telegram.org 
 3.Get you user id using [Rose](https://t.me/MissRose_bot)
-4.Get chat base token from
+4.Get chat base token from [Chat Base](https://chatbase.com)
+5.Get bot token from [@BotFather](https://telegram.dog/BotFather)
