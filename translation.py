@@ -6,8 +6,6 @@ This is a Telegram File 2 video or video 2 file convert bot
 
 
 Please send /help to know how to use me
-
-<i>This bot was made for the people of the channel @telugu_dubbed_moviess and @Telugu_Moviessssss</i>
      
     """
     ABS_TEXT = " Please don't be selfish."
