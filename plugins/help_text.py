@@ -117,7 +117,7 @@ Owner_id = [1337144652]
 from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
-async def ban(bot, update, Owner_id):
+async def ban(bot, update):
    TRChatBase(update.from_user.id, update.text, "/ban")
    banid = int(update.text.split(' ', 1)[1])
    if update.from_user.id in Owner_id:
@@ -128,20 +128,20 @@ async def ban(bot, update, Owner_id):
 
    return Config.BANNED_USERS.append(banid)
 
-#@pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
-#async def ban(bot, update, Owner_id):
-  # unbanid = int(update.text.split(' ', 1)[1])
-  # TRChatBase(update.from_user.id, update.text, "/unban")
-  # if update.from_user.id in Owner_id:
-    # if unbanid in BANNED_USERS:
-    #  await bot.send_message(
-    #    chat_id=update.chat.id,
-      #  text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
-      #  )
-   #   return Config.BANNED_USERS.remove(unbanid)
-    # else:
-      # await bot.send_message(
-       # chat_id=update.chat.id,
-       # text='User with ID {} Was not an banned user'.format(unbanid)
-      #  )
-   #  return False
+@pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
+async def ban(bot, update):
+   unbanid = int(update.text.split(' ', 1)[1])
+   TRChatBase(update.from_user.id, update.text, "/unban")
+   if update.from_user.id in Owner_id:
+     if unbanid in BANNED_USERS:
+      await bot.send_message(
+        chat_id=update.chat.id,
+        text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
+        )
+      return Config.BANNED_USERS.remove(unbanid)
+     else:
+       await bot.send_message(
+        chat_id=update.chat.id,
+        text='User with ID {} Was not an banned user'.format(unbanid)
+        )
+     return False
