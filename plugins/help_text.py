@@ -134,12 +134,12 @@ from sample_config import Config
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
 async def ban(bot, update):
    TRChatBase(update.from_user.id, update.text, "/ban")
-   banid = update.text
+   banid = int(update.text.split(' ', 1)[1])
    if update.from_user.id in Owner_id:
       await bot.send_message(
         chat_id=update.chat.id,
-        text='User with ID {} Was banned from using your bot successfully'.format(banid[5:])
+        text='User with ID {} Was banned from using your bot successfully'.format(banid)
         )
 
-   return Config.BANNED_USERS.append(' banid[5:]')
+   return Config.BANNED_USERS.append('banid')
 
