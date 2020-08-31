@@ -127,7 +127,7 @@ async def donate(bot, update):
            )
           )
 
-from sample_config import BANNED_USERS
+from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
 async def ban(bot, update):
@@ -139,5 +139,5 @@ async def ban(bot, update):
         text='User with ID {} Was banned from using your bot successfully'.formate(banid)
         )
 
-   return sample_config.BANNED_USERS.append(' banid')
+   return sample_config.Config.BANNED_USERS.append(' banid')
 
