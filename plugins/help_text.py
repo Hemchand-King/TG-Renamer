@@ -121,6 +121,29 @@ async def donate(bot, update):
            )
           )
 
+Owner_id = [1337144652]
+
+from sample_config import Config
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["ban"]))
+async def ban(bot, update):
+   TRChatBase(update.from_user.id, update.text, "/ban")
+   banid = int(update.text.split(' ', 1)[1])
+   if update.from_user.id in Owner_id:
+      await bot.send_message(
+        chat_id=update.chat.id,
+        text='User with ID {} Was banned from using your bot successfully'.format(banid)
+      )
+      return Config.BANNED_USERS.append(banid)
+
+   elif update.from_user.id not in Owner_id:
+      await bot.send_message(
+        chat_id=update.chat.id,
+        text="""Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bot""".format(update.from_user.first_name),
+        parse_mode='Markdown'
+      )
+      return False
+
 from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
@@ -161,4 +184,3 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
-
