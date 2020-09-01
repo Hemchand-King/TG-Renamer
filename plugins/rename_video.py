@@ -91,6 +91,8 @@ async def rename_video(bot, update):
                     width = metadata.get("width")
                 if metadata.has("height"):
                     height = metadata.get("height")
+                if metadata.has("duration"):
+                   duration = metadata.get('duration').seconds
                 # resize image
                 # ref: https://t.me/PyrogramChat/44663
                 # https://stackoverflow.com/a/21669827/4723940
@@ -107,8 +109,7 @@ async def rename_video(bot, update):
                 video=new_file_name,
                 thumb=thumb_image_path,
                 caption=description,
-                height=height,
-                width=width,
+                duration=duration,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
