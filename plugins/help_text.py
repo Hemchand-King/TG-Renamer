@@ -125,15 +125,15 @@ async def ban(bot, update):
         chat_id=update.chat.id,
         text='User with ID {} Was banned from using your bot successfully'.format(banid)
         )
+    return Config.BANNED_USERS.append(banid)
 
-     return Config.BANNED_USERS.append(banid)
   elif update.from_user.id not in Owner_id:
       await bot.send_message(
         chat_id=update.chat.id,
         text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bota.format(update.from_user.first_name),
         parse_mode='Markdown'
          )
-           return False
+        return False
 
 from sample_config import Config
 
@@ -160,11 +160,11 @@ async def unban(bot, update):
         text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bota.format(update.from_user.first_name),
         parse_mode='Markdown'
          )
-       return False
+      return False
    else:
         await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
          )
-         return False
+       return False
 
