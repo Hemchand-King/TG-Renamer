@@ -135,6 +135,3 @@ async def rename_video(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
-from pyrogram.types import ForceReply
-
-await message.reply("hi", reply_markup=ForecReply())
