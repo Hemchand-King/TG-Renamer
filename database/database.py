@@ -61,3 +61,6 @@ async def get_thumb(id):
         return t
     finally:
         SESSION.close()
+    async def total_users_count(self):
+        count = await self.col.count_documents({})
+        return count
