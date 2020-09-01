@@ -187,7 +187,7 @@ async def status(bot, update):
 
 from pyrogram import ForceReply
 
-@Client.on_message()
+@pyrogram.Client.on_message()
 async def send_reply(bot, message):
     await message.reply(
         'hi',
