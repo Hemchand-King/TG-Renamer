@@ -125,7 +125,7 @@ async def ban(bot, update):
         chat_id=update.chat.id,
         text='User with ID {} Was banned from using your bot successfully'.format(banid)
       )
-     return Config.BANNED_USERS.append(banid)
+      return Config.BANNED_USERS.append(banid)
 
    elif update.from_user.id not in Owner_id:
       await bot.send_message(
@@ -147,7 +147,7 @@ async def unban(bot, update):
         chat_id=update.chat.id,
         text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
         )
-    return Config.BANNED_USERS.remove(unbanid)
+      return Config.BANNED_USERS.remove(unbanid)
     elif unbanid not in Config.BANNED_USERS:
       await bot.send_message(
         chat_id=update.chat.id,
