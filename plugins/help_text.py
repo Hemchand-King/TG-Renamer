@@ -120,3 +120,8 @@ async def donate(bot, update):
              ]
            )
           )
+@pyrogram.Client.on_message(pyrogram.Filters.command("status"))
+async def sts(bot, update):
+    
+    total_users = await bot.db.total_users_count()
+    await m.reply_text(text=f"No of users : {total_users}", quote=True)
