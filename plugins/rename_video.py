@@ -81,10 +81,8 @@ async def rename_video(bot, update):
                 )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-                        if not os.path.exists(thumb_image_path):
-                  thumb_image_path = None
-            else:
-                  thumb_image_path = None
+            if not os.path.exists(thumb_image_path):
+              thumb_image_path = None
             else:
                 width = 0
                 height = 0
