@@ -41,7 +41,7 @@ async def convert_to_file(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.video, "converttofile")
+    TRChatBase(update.from_user.id, update.text, "converttofile")
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -156,7 +156,7 @@ async def convert_to_file(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.document, "converttovideo")
+    TRChatBase(update.from_user.id, update.text, "converttovideo")
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
