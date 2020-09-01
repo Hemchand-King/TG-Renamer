@@ -107,6 +107,8 @@ async def rename_video(bot, update):
                 video=new_file_name,
                 thumb=thumb_image_path,
                 caption=description,
+                height=height,
+                width=width,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
