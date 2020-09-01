@@ -256,12 +256,12 @@ async def convert_to_file(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
+            message.continue_propagation()
     else:
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_C2V,
             reply_to_message_id=update.message_id
         )
-  else:
-     return False
- message.continue_propagation()
+        message.continue_propagation()
+
