@@ -139,9 +139,9 @@ from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
 async def unban(bot, update):
-   unbanid = int(update.text.split(' ', 1)[1])
-   TRChatBase(update.from_user.id, update.text, "/unban")
-   if update.from_user.id in Owner_id:
+ unbanid = int(update.text.split(' ', 1)[1])
+ TRChatBase(update.from_user.id, update.text, "/unban")
+ if update.from_user.id in Owner_id:
      if unbanid in Config.BANNED_USERS:
       await bot.send_message(
         chat_id=update.chat.id,
@@ -161,7 +161,7 @@ async def unban(bot, update):
         parse_mode='Markdown'
          )
        return False
-     else:
+   else:
         await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
