@@ -125,3 +125,64 @@ async def sts(bot, update):
     
     total_users = await bot.db.total_users_count()
     await m.reply_text(text=f"No of users : {total_users}", quote=True)
+
+from sample_config import Config
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
+async def unban(bot, update):
+ unbanid = int(update.text.split(' ', 1)[1])
+ TRChatBase(update.from_user.id, update.text, "/unban")
+ if update.from_user.id in Owner_id:
+    if unbanid in Config.BANNED_USERS:
+      await bot.send_message(
+        chat_id=update.chat.id,
+        text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
+        )
+      return Config.BANNED_USERS.remove(unbanid)
+    elif unbanid not in Config.BANNED_USERS:
+      await bot.send_message(
+        chat_id=update.chat.id,
+        text='User with ID {} Was not an banned user 🤷‍♂️'.format(unbanid)
+       )
+      return False
+    else:
+       await bot.send_message(
+            chat_id=update.chat.id,
+            text='Error 🤔'
+         )
+       return False
+
+ elif update.from_user.id not in Owner_id:
+      await bot.send_message(
+          chat_id=update.chat.id,
+          text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bot'.format(update.from_user.first_name),
+          parse_mode='Markdown'
+       )
+      return False
+ elif update.from_user.id in Config.BANNED_USERS:
+      await bot.send_message(
+          chat_id=update.chat.id,
+          text='Hai 😡 **{}!!!** \you are banned you are able to remove that on your own'.format(update.from_user.first_name),
+          parse_mode='Markdown'
+       )
+      return False
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["status"]))
+async def status(bot, update):
+      Total_bot_users = await bot.get_chat_members_count
+      await bot.send_message(
+            chat_id=update.chat.id,
+            text="**No of persons using this bot : **{}".format(Total_bot_users),
+            parse_mode='Markdown'
+      )
+
+from pyrogram import ForceReply
+
+@pyrogram.Client.on_message()
+async def send_reply(bot, message):
+  if message.document is not None:
+    await message.reply(
+        'Send the name of the file now without removing /rename',
+        reply_markup=ForceReply('/rename '),
+        quote=True)
+    return True
