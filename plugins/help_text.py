@@ -184,3 +184,12 @@ async def status(bot, update):
             text="**No of persons using this bot : **{}".format(Total_bot_users),
             parse_mode='Markdown'
       )
+
+from pyrogram import ForceReply
+
+@Client.on_message()
+async def send_reply(bot, message):
+    await message.reply(
+        'hi',
+        reply_markup=ForceReply(),
+        quote=True)
