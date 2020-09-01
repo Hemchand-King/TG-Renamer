@@ -122,7 +122,7 @@ async def convert_to_file(bot, update):
                 #supports_streaming=True,
                 # reply_markup=reply_markup,
                 thumb=thumb_image_path,
-                reply_to_message_id=update.reply_to_message.message_id,
+                reply_to_message_id=update.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START_VIDEO,
@@ -237,7 +237,7 @@ async def convert_to_file(bot, update):
                 supports_streaming=True,
                 # reply_markup=reply_markup,
                 thumb=thumb_image_path,
-                reply_to_message_id=update.reply_to_message.message_id,
+                reply_to_message_id=update.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
