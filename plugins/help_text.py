@@ -133,7 +133,7 @@ async def ban(bot, update):
         text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bota.format(update.from_user.first_name),
         parse_mode='Markdown'
          )
-       return False
+           return False
 
 from sample_config import Config
 
@@ -161,7 +161,7 @@ async def unban(bot, update):
         parse_mode='Markdown'
          )
        return False
-      else:
+     else:
         await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
