@@ -121,14 +121,6 @@ async def donate(bot, update):
            )
           )
 
-from database.database import *
-
-@pyrogram.Client.on_message(pyrogram.Filters.command("status"))
-async def sts(bot, update):
-    
-    total_users = database.total_users_count()
-    await m.reply_text(text=f"No of users : {total_users}", quote=True)
-
 from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["unban"]))
