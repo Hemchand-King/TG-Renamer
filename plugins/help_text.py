@@ -124,7 +124,7 @@ async def ban(bot, update):
       await bot.send_message(
         chat_id=update.chat.id,
         text='User with ID {} Was banned from using your bot successfully'.format(banid)
-        )
+      )
      return Config.BANNED_USERS.append(banid)
 
    elif update.from_user.id not in Owner_id:
@@ -132,8 +132,8 @@ async def ban(bot, update):
         chat_id=update.chat.id,
         text="""Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bot""".format(update.from_user.first_name),
         parse_mode='Markdown'
-         )
-        return False
+      )
+     return False
 
 from sample_config import Config
 
@@ -142,27 +142,27 @@ async def unban(bot, update):
  unbanid = int(update.text.split(' ', 1)[1])
  TRChatBase(update.from_user.id, update.text, "/unban")
  if update.from_user.id in Owner_id:
-     if unbanid in Config.BANNED_USERS:
+    if unbanid in Config.BANNED_USERS:
       await bot.send_message(
         chat_id=update.chat.id,
         text='User with ID {} Was unbanned and free to use  your bot'.format(unbanid)
         )
       return Config.BANNED_USERS.remove(unbanid)
-     elif unbanid not in Config.BANNED_USERS:
-       await bot.send_message(
+    elif unbanid not in Config.BANNED_USERS:
+      await bot.send_message(
         chat_id=update.chat.id,
         text='User with ID {} Was not an banned user 🤷‍♂️'.format(unbanid)
-        )
+       )
       return False
     elif update.from_user.id not in Owner_id:
       await bot.send_message(
-        chat_id=update.chat.id,
-        text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bota.format(update.from_user.first_name),
-        parse_mode='Markdown'
-         )
+          chat_id=update.chat.id,
+          text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bota.format(update.from_user.first_name),
+          parse_mode='Markdown'
+       )
       return False
    else:
-        await bot.send_message(
+       await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
          )
