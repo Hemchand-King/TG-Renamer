@@ -31,7 +31,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message()
+@pyrogram.Client.on_message(pyrogram.Filter(['converttovideo']))
 async def convert_to_file(bot, update):
   if update.video is not None:
     if update.from_user.id in Config.BANNED_USERS:
