@@ -31,7 +31,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(filters.video)
+@pyrogram.Client.on_message(Filters.video)
 async def convert_to_file(bot, update):
   if update.video is not None:
     if update.from_user.id in Config.BANNED_USERS:
@@ -150,7 +150,9 @@ async def convert_to_file(bot, update):
             reply_to_message_id=update.message_id
         )
 
-  elif update.document is not None:
+@pyrogram.Client.on_message(Filters.document)
+async def convert_to_file(bot, update):
+  if update.document is not None:
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
             chat_id=update.chat.id,
