@@ -177,8 +177,8 @@ async def unban(bot, update):
       return False
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["status"]))
-async def status(c, m):
-      Total_bot_users = await c.db.total_users_count()
+async def status(bot, update):
+      Total_bot_users = await bot.get_chat_members_count
       await bot.send_message(
             chat_id=update.chat.id,
             text="**No of persons using this bot : **{}".format(Total_bot_users),
