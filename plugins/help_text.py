@@ -191,13 +191,7 @@ from pyrogram import ForceReply
 async def send_reply(bot, message):
   if message.document is not None:
     await message.reply(
-        'hi',
-        reply_markup=ForceReply(),
+        'Send the name of the file now without removing /rename',
+        reply_markup=ForceReply(/rename ),
         quote=True)
     return True
-  else:
-     await bot.send_message(
-            chat_id=message.chat.id,
-            text='Hai I am not your girl friend don't spam here',
-             )
-            
