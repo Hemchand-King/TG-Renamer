@@ -262,3 +262,5 @@ async def convert_to_file(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_C2V,
             reply_to_message_id=update.message_id
         )
+  else:
+     return False
