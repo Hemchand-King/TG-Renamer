@@ -161,7 +161,7 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
-   else:
+    else:
        await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
