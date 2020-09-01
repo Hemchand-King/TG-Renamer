@@ -187,9 +187,16 @@ async def status(bot, update):
 
 from pyrogram import ForceReply
 
-@pyrogram.Client.on_message(pyrogram.send_document)
+@pyrogram.Client.on_message()
 async def send_reply(bot, message):
+  if message.document is not None:
     await message.reply(
         'hi',
         reply_markup=ForceReply(),
         quote=True)
+    return True
+  else:
+     await message.reply(
+            'Hai I am not your girl friend don't spam here's
+             quote=True)
+            
