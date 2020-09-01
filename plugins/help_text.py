@@ -192,6 +192,6 @@ async def send_reply(bot, message):
   if message.document is not None:
     await message.reply(
         'Send the name of the file now without removing /rename',
-        reply_markup=ForceReply(/rename ),
+        reply_markup=ForceReply('/rename '),
         quote=True)
     return True
