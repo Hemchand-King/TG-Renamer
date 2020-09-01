@@ -154,17 +154,26 @@ async def unban(bot, update):
         text='User with ID {} Was not an banned user 🤷‍♂️'.format(unbanid)
        )
       return False
-    elif update.from_user.id not in Owner_id:
-      await bot.send_message(
-          chat_id=update.chat.id,
-          text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bot'.format(update.from_user.first_name),
-          parse_mode='Markdown'
-       )
-      return False
     else:
        await bot.send_message(
             chat_id=update.chat.id,
             text='Error 🤔'
          )
        return False
+
+ elif update.from_user.id not in Owner_id:
+      await bot.send_message(
+          chat_id=update.chat.id,
+          text='Hai 😡 **{}** your not any admin this command only for admin of this bot for banning users from this bot'.format(update.from_user.first_name),
+          parse_mode='Markdown'
+       )
+      return False
+ elif update.from_user.id in Config.BANNED_USERS:
+      await bot.send_message(
+          chat_id=update.chat.id,
+          text='Hai 😡 **{}!!!** \you are banned you are able to remove that on your own'.format(update.from_user.first_name),
+          parse_mode='Markdown'
+       )
+      return False
+
 
