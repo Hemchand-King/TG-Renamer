@@ -196,7 +196,8 @@ async def send_reply(bot, message):
         quote=True)
     return True
   else:
-     await message.reply(
-            'Hai I am not your girl friend don't spam here',
-             quote=True)
+     await bot.send_message(
+            chat_id=message.chat.id,
+            text='Hai I am not your girl friend don't spam here',
+             )
             
