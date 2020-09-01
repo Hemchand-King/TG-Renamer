@@ -41,7 +41,7 @@ async def convert_to_file(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "converttovideo")
+    TRChatBase(update.from_user.id, update.video)
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -52,7 +52,7 @@ async def convert_to_file(bot, update):
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
-            message=update.reply_to_message,
+            message=update.message,
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
@@ -156,7 +156,7 @@ async def convert_to_file(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "converttovideo")
+    TRChatBase(update.from_user.id, update.document)
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -167,7 +167,7 @@ async def convert_to_file(bot, update):
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
-            message=update.reply_to_message,
+            message=update..message,
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
