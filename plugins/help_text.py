@@ -177,8 +177,9 @@ async def status(bot, update):
       )
 
 from pyrogram import ForceReply
-
+From database import status
 @pyrogram.Client.on_message()
+
 async def send_reply(bot, message):
   if message.document is not None:
     await message.reply(
