@@ -26,24 +26,21 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
+from database.database import *
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename_video"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await bot.delete_messages(
-            chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
+        await update.reply_text("You are B A N N E D")
         return
     TRChatBase(update.from_user.id, update.text, "rename_video")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-        if len(file_name) > 6400:
+        if len(file_name) > 64000:
             await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
-                    alimit="6400",
+                    alimit="64",
                     num=len(file_name)
                 )
             )
@@ -71,7 +68,7 @@ async def rename_video(bot, update):
                 await bot.edit_message_text(
                     text=Translation.SAVED_RECVD_DOC_FILE,
                     chat_id=update.chat.id,
-                    message_id=b.message_id
+                    message_id=a.message_id
                 )
             except:
                 pass
@@ -85,17 +82,21 @@ async def rename_video(bot, update):
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
+                mes = await get_thumb(update.from_user.id)
+                if mes != None:
+                    m = await bot.get_messages(update.chat.id, mes.msg_id)
+                    await m.download(file_name=thumb_image_path)
+                    thumb_image_path = thumb_image_path
+                else:
+                    thumb_image_path = None
             else:
                 width = 0
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
-                    width_video = metadata.get("width")
+                    width = metadata.get("width")
                 if metadata.has("height"):
-                    height_videi = metadata.get("height")
-                if metadata.has("duration"):
-                    duration = metadata.get("duration")
+                    height = metadata.get("height")
                 # resize image
                 # ref: https://t.me/PyrogramChat/44663
                 # https://stackoverflow.com/a/21669827/4723940
@@ -109,12 +110,9 @@ async def rename_video(bot, update):
             c_time = time.time()
             await bot.send_video(
                 chat_id=update.chat.id,
-                document=new_file_name,
+                video=new_file_name,
                 thumb=thumb_image_path,
-               # width=width_video,
-               # height=height_video,
-                #duration=duration,
-                caption=description.format(new_file_name[12:-4]),
+                caption=description,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
@@ -126,13 +124,13 @@ async def rename_video(bot, update):
             )
             try:
                 os.remove(new_file_name)
-               # os.remove(thumb_image_path)
+                #os.remove(thumb_image_path)
             except:
                 pass
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
-                message_id=a.message_id,
+                message_id=b.message_id,
                 disable_web_page_preview=True
             )
     else:
@@ -141,5 +139,3 @@ async def rename_video(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
-
-
