@@ -40,7 +40,7 @@ async def convert_to_video(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.document, "converttovideo")
+    TRChatBase(update.from_user.id, update.text, "converttovideo")
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -121,7 +121,7 @@ async def convert_to_video(bot, update):
                 supports_streaming=True,
                 # reply_markup=reply_markup,
                 thumb=thumb_image_path,
-                reply_to_message_id=update.document,
+                reply_to_message_id=update.text,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
