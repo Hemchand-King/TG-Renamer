@@ -121,7 +121,7 @@ async def convert_to_video(bot, update):
                 supports_streaming=True,
                 # reply_markup=reply_markup,
                 thumb=thumb_image_path,
-                reply_to_message_id=update.document.id,
+                reply_to_message_id=update.document,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
