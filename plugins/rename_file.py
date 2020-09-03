@@ -54,6 +54,7 @@ If you want to upload as video send the name in this format
                  parse_mode='Markdown',
                  reply_markup=ForceReply()
                 )
+           return
  elif update.reply_to_message == TEXT:
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
