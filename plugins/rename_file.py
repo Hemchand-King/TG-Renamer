@@ -42,7 +42,7 @@ If you want to upload as video send the name in this format
 
 @pyrogram.Client.on_message(pyrogram.Filters.document)
 async def rename_doc(bot, update):
- if update.reply_to_message is None:
+ if update.document is not None:
      async def doc(bot, update):
            await bot.send_message(
                  chat_id=update.chat.id,
