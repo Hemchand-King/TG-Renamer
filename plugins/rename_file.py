@@ -39,17 +39,29 @@ If you want to upload as file send in this format
 If you want to upload as video send the name in this format 
 `video - New Name.extention`"""
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
+@pyrogram.Client.on_message(pyrogram.Filters.document)
 async def rename_doc(bot, update):
- if update.reply_to_message == TEXT:
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
-        return
-    TRChatBase(update.from_user.id, update.text, "rename")
-    if (" " in update.text) and (update.reply_to_message.reply_to_message is not None):
-        cmd, file_name = update.text.split(" ", 1)
+ if update.reply_to_message is None:
+     async def doc(bot, update):
+           await bot.send_message(
+                 chat_id=update.chat.id,
+                 text="""**Now Send me the name of the new file with extension**\n
+If you want to upload as file send in this format 
+`New Name.Extention`
+If you want to upload as video send the name in this format 
+`video - New Name.extention`""",
+                 parse_mode='Markdown',
+                 reply_markup=ForceReply()
+                )
+ elif update.reply_to_message == TEXT:
+     if update.from_user.id in Config.BANNED_USERS:
+         await update.reply_text("You are B A N N E D")
+         return
+     TRChatBase(update.from_user.id, update.text, "rename")
+     if (" " in update.text) and (update.reply_to_message.reply_to_message is not None):
+         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 6400:
-            await update.reply_text(
+             await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
                     alimit="6400",
                     num=len(file_name)
