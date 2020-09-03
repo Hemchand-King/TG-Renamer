@@ -57,7 +57,7 @@ If you want to upload as video send the name in this format
            return
 @pyrogram.Client.on_message(pyrogram.Filters.text)
 async def rename_doc(bot, update):
- if len(update.reply_to_message) == len(TEXT):
+ if len(update.reply_to_message) != len(TEXT):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
