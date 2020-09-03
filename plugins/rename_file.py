@@ -59,7 +59,7 @@ If you want to upload as video send the name in this format
         await update.reply_text("You are B A N N E D")
         return
     TRChatBase(update.from_user.id, update.text, "rename")
-     if (" " in update.text) and (update.reply_to_message.reply_to_message is not None):
+    if (" " in update.text) and (update.reply_to_message.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 6400:
              await update.reply_text(
