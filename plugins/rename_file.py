@@ -60,7 +60,10 @@ async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
-    TRChatBase(update.from_user.id, update.text)
+    MEDIA = await bot.get_message(
+                chat_id=update.chat.id,
+                replies=2)
+    TRChatBase(update.from_user.id, update.text, "rename")
     if update.reply_to_message is not None:
         file_name = update.text
         if len(file_name) > 6400:
@@ -80,7 +83,7 @@ async def rename_doc(bot, update):
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
-            message=update.reply_to_message.doc,
+            message=CHAT,
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
