@@ -34,15 +34,14 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-TEXT = """Now Send me the name of the new file with extension
-
+TEXT = """**Now Send me the name of the new file with extension**\n
 If you want to upload as file send in this format 
-New Name.Extention
+`New Name.Extention`
 If you want to upload as video send the name in this format 
-video - New Name.extention"""
+`video - New Name.extention`"""
 
 @pyrogram.Client.on_message(pyrogram.Filters.document)
-async def rename_doc(bot, update):
+async def doc(bot, update):
  if update.document is not None:
            await bot.send_message(
                  chat_id=update.chat.id,
@@ -55,7 +54,9 @@ If you want to upload as video send the name in this format
                  reply_markup=ForceReply()
                 )
            return
- elif ln(update.reply_to_message) == ln(TEXT):
+@pyrogram.Client.on_message(pyrogram.Filters.text)
+async def rename_doc(bot, update):
+ if update.reply_to_message == TEXT:
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
