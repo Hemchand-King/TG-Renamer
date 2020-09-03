@@ -191,7 +191,7 @@ async def cancel(bot, update):
               chat_id=update.message_id,
               text="Process cancelled succesfully 😁"
         )
-        return update.reply_message.stop_transmission()
+        return update.reply_to_message.stop_transmission()
      else:
           await bot.send_message(
                  chat_id=update.message_id,
