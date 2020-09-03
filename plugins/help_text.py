@@ -61,7 +61,8 @@ async def start(bot, update):
           ],
           [
           InlineKeyboardButton('Updates channel 📢', url='https://t.me/anonymousbotupdates'),
-          InlineKeyboardButton('Rate Me ⭐', url='https://t.me/anonymousbotdiscussion/215')
+          InlineKeyboardButton((f'🎞 Upload as video: {on_off(user.stream_video)}',
+                                         callback_data=f'stream_video|{not user.stream_video}')
           ]
         ]
       )
