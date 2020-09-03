@@ -46,11 +46,11 @@ async def rename_doc(bot, update):
  if update.document is not None:
            await bot.send_message(
                  chat_id=update.chat.id,
-                 text="""Now Send me the name of the new file with extension**\n
+                 text="""**Now Send me the name of the new file with extension**\n
 If you want to upload as file send in this format 
-New Name.Extention
+`New Name.Extention`
 If you want to upload as video send the name in this format 
-video - New Name.extention""",
+`video - New Name.extention`""",
                  parse_mode='Markdown',
                  reply_markup=ForceReply()
                 )
