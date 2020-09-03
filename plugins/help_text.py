@@ -184,18 +184,3 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
-from pyrogram import ForceReply
-
-@pyrogram.Client.on_message(pyrogram.Filters.document & pyrogram.Filters.incoming)
-async def doc(bot, update):
-         await bot.send_message(
-              chat_id=update.chat.id,
-              text="""**Now Send me the name of the new file with extension**\n
-If you want to upload as file send in this format 
-`New Name.Extention`
-
-If you want to upload as video send the name in this format 
-`video - New Name.extention`""",
-              parse_mode='Markdown',
-              reply_markup=ForceReply()
-                )
