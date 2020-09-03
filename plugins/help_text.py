@@ -184,3 +184,17 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
+@pyrogram.Client.on_callback_query(pyrogram.Filters.command(["cancel"]))
+async def cancel(bot, update):
+     if update.reply_to_message is not None:
+        await bot.send_message(
+              chat_id=update.message_id,
+              text="Process cancelled succesfully 😁"
+        )
+        return update.reply_messagestop_transmission()
+     else:
+          await bot.send_message(
+                 chat_id=update.message_id,
+                 text="reply to the message which you wanted to cancel 🤭'
+          )
+          return False
