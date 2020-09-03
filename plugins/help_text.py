@@ -195,6 +195,6 @@ async def cancel(bot, update):
      else:
           await bot.send_message(
                  chat_id=update.message_id,
-                 text="reply to the message which you wanted to cancel 🤭'
+                 text="reply to the message which you wanted to cancel 🤭"
           )
           return False
