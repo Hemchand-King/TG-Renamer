@@ -61,7 +61,7 @@ async def rename_doc(bot, update):
         await update.reply_text("You are B A N N E D")
         return
     TRChatBase(update.from_user.id, update.text)
-    if update.reply_to_message.reply_to_message is not None:
+    if update.reply_to_message is not None:
         file_name = update.text
         if len(file_name) > 6400:
              await update.reply_text(
