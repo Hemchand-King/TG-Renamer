@@ -188,13 +188,13 @@ async def unban(bot, update):
 async def cancel(bot, update):
      if update.reply_to_message is not None:
         await bot.send_message(
-              chat_id=update.message_id,
+              chat_id=update.from_user.id,
               text="Process cancelled succesfully 😁"
         )
         return update.reply_to_message.stop_transmission()
      else:
           await bot.send_message(
-                 chat_id=update.message_id,
+                 chat_id=update.from_user.id,
                  text="reply to the message which you wanted to cancel 🤭"
           )
           return False
