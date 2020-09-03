@@ -84,7 +84,7 @@ async def rename_doc(bot, update):
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
-            message=CHAT,
+            message=update.reply_to_message.reply_to_message.doc,
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
