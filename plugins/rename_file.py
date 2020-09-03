@@ -40,7 +40,7 @@ If you want to upload as file send in this format
 If you want to upload as video send the name in this format 
 `video - New Name.extention`"""
 
-@pyrogram.Client.on_message(pyrogram.Filters.document)
+@pyrogram.Client.on_message(pyrogram.Filters.document & pyrogram.Filters.incoming)
 async def doc(bot, update):
  if update.document is not None:
            await bot.send_message(
@@ -56,7 +56,7 @@ If you want to upload as video send the name in this format
            return
 @pyrogram.Client.on_message(pyrogram.Filters.text)
 async def rename_doc(bot, update):
- if update.reply_to_message == TEXT:
+ if update.reply_to_message is not None:
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
@@ -80,7 +80,7 @@ async def rename_doc(bot, update):
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
-            message=update.reply_to_message.reply_to_message.doc,
+            message=update.reply_to_message.doc,
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
