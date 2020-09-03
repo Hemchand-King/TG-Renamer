@@ -61,7 +61,7 @@ async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
-    MEDIA = await bot.get_message(
+    MEDIA = await bot.get_messages(
                 chat_id=update.chat.id,
                 replies=2)
     TRChatBase(update.from_user.id, update.text, "rename")
