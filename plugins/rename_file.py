@@ -55,7 +55,7 @@ If you want to upload as video send the name in this format
                  reply_markup=ForceReply()
                 )
            return
-@pyrogram.Client.on_message(pyrogram.Filters.text)
+@pyrogram.Client.on_message(pyrogram.Filters.text(hi))
 async def rename_doc(bot, update):
  if update.reply_to_message.text == TEXT:
     await bot.send_message(
