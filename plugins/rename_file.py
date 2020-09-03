@@ -64,9 +64,9 @@ async def rename_doc(bot, update):
     TRChatBase(update.from_user.id, update.text, "rename")
     if update.reply_to_message is not None:
         file_name = update.text
-      MEDIA = await bot.get_messages(
-                    chat_id=update.chat.id,
-                    replies=2)
+        MEDIA = await bot.get_messages(
+                      chat_id=update.chat.id,
+                      replies=2)
         if len(file_name) > 6400:
              await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
