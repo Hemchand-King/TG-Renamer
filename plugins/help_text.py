@@ -90,7 +90,7 @@ async def cancel(bot, update):
                   )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["settings"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["setting"]))
 async def settings(bot, update):
                await bot.send_message(
                      chat_id=update.chat.id,
@@ -198,3 +198,13 @@ async def cancel(bot, update):
                  text="reply to the message which you wanted to cancel 🤭"
           )
           return False
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["settings"]))
+def make_setting_kb(user):
+    def on_off(value):
+        return 'ON' if value else 'OFF'
+     await bot.send_message(
+           chat_id=update.from_user.id,
+           text='test',
+           reply_markup=ReplyKeyboardMarkup(
+[[InlineKeyboardButton(f'📸 Receive screenshots: {on_off(user.screenshot)}']])
