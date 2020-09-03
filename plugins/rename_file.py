@@ -51,6 +51,7 @@ If you want to upload as file send in this format
 If you want to upload as video send the name in this format 
 `video - New Name.extention`""",
                  parse_mode='Markdown',
+                 reply_to_message_id=update message.id,
                  reply_markup=ForceReply()
                 )
            return
