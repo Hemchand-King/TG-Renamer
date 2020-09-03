@@ -184,5 +184,5 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
- else:
+ elif unbanid is None:
      print('please include the id of the user')
