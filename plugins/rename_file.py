@@ -60,7 +60,7 @@ If you want to upload as video send the name in this format
         return
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message.reply_to_message is not None):
-        cmd, file_name = update.text.split(" ", 1)
+        file_name = update.text
         if len(file_name) > 6400:
              await update.reply_text(
                 Translation.IFLONG_FILE_NAME.format(
