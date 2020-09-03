@@ -62,3 +62,8 @@ async def rename_doc(bot, update):
             chat_id=updage.message_id,
             text="welcome",
             )
+ else:
+       await bot.send_message(
+            chat_id=updage.message_id,
+            text="welcome",
+            )
