@@ -61,7 +61,6 @@ async def rename_doc(bot, update):
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             )
-        )
         if the_real_download_location is not None:
             try:
                 await bot.edit_message_text(
