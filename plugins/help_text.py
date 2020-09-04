@@ -190,29 +190,3 @@ async def cancel(bot, update):
           )
           return False
 
-active_downloads = []
-def progress(current, total, client, msg_id)
-    global active_downloads
-    print("{:.lf}%".format(current * 100 / total))
-    if msg_id not in active downloads:
-       client.stop_transmission()
-
-@pyrogram.Client.on_message(pyrogram.Filters.document)
-async def download_document(bot, update):
-    Button = [[InlineKeyboardButton('Cancel 🚫', callback_data='cancel download')]]
-    reply_markup = InlineKeyboardMarkup(Button)
-    msg = update.reply('Downloading, reply_markup=reply_markup)
-    await update.download(progress=progess, progress_args=(client, msg.message_id))
-    await msg.edit('Download Complete')
-
-
-@pyrogram.Client.on_callback_query(pyrogram.Filter.create(lamda _, cb: cb.data=='cancel download'))
-async def cancel_download(bot, callback):
-     global active_downloads
-     msg_id = callback.message.message_id
-     try:
-         active_downloads.remove(msg_id)
-     except ValueError :
-          await callback.message.edit_text('this task is already cancelled')
-    else:
-        await callback.answer("you process will cancel soon", show_alert=True)
