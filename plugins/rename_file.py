@@ -60,12 +60,6 @@ async def rename_doc(bot, update):
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
-            file_name=download_location,
-            progress=progress_for_pyrogram,
-            progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
             )
         )
         if the_real_download_location is not None:
@@ -144,3 +138,31 @@ async def rename_doc(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
+
+
+active_downloads = []
+def progress(current, total, client, msg_id)
+    global active_downloads
+    print("{:.lf}%".format(current * 100 / total))
+    if msg_id not in active downloads:
+       client.stop_transmission()
+
+@pyrogram.Client.on_message(pyrogram.Filters.document)
+async def download_document(bot, update):
+    Button = [[InlineKeyboardButton('Cancel 🚫', callback_data='cancel download')]]
+    reply_markup = InlineKeyboardMarkup(Button)
+    msg = update.reply('Downloading, reply_markup=reply_markup)
+    await update.download(progress=progess, progress_args=(client, msg.message_id))
+    await msg.edit('Download Complete')
+
+
+@pyrogram.Client.on_callback_query(pyrogram.Filter.create(lamda _, cb: cb.data=='cancel download'))
+async def cancel_download(bot, callback):
+     global active_downloads
+     msg_id = callback.message.message_id
+     try:
+         active_downloads.remove(msg_id)
+     except ValueError :
+          await callback.message.edit_text('this task is already cancelled')
+    else:
+        await callback.answer("you process will cancel soon", show_alert=True)
