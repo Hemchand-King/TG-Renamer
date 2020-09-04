@@ -176,8 +176,8 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
-
-async def user_in_channel(bot, update):
+CHANNEL_USERNAME = "@anonymousbotupdates"
+async def user_in_channel(CHANNEL_USERNAME):
  try:
     chat = await bot.get_chat_member(CHANNEL_USERNAME, chat_id)
     if chat.status=='kicked':
