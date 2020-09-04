@@ -175,29 +175,3 @@ async def unban(bot, update):
           parse_mode='Markdown'
        )
       return False
-@pyrogram.Client.on_callback_query(pyrogram.Filters.command(["cancel"]))
-async def cancel(bot, update):
-     if update.reply_to_message is not None:
-        await bot.send_message(
-              chat_id=update.from_user.id,
-              text="Process cancelled succesfully 😁"
-        )
-        return update.reply_to_message.stop_transmission()
-     else:
-          await bot.send_message(
-                 chat_id=update.from_user.id,
-                 text="reply to the message which you wanted to cancel 🤭"
-          )
-          return False
-
-
-@pyrogram.Client.on_message(pyrogram.Filters.command(["f"]))
-async def download_document(bot, update): 
-      Button = [[InlineKeyboardButton('Cancel 🚫', callback_data='cancel download')]] 
-      reply_markup = InlineKeyboardMarkup(Button) 
-      msg = update.reply('Downloading, reply_markup=reply_markup) 
-
-@pyrogram.Client.on_callback_query(pyrogram.Filter.create(lamda _, cb: cb.data=='help'))
-async def cancel_download(bot, callback):  
-      msg_id = callback.message.message_id
-         await callback.answer("you process will cancel soon", show_alert=True)
