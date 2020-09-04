@@ -79,7 +79,7 @@ async def start(bot, update):
           InlineKeyboardButton('Rate me ⭐', url='https://t.me/anonymousbotdiscussion/92')
          ],
          [
-         InlineKeyboardButton(text="🤝Help",callback_data="help",show_alert=Translation.HELP_USER.format(update.from_user.first_name))
+         InlineKeyboardButton(text="🤝Help", alert_text=Translation.HELP_USER.format(update.from_user.first_name))
          ]
         ]
        )
