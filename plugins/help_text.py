@@ -25,6 +25,8 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.chat_base import TRChatBase
 
+state = get_chat_member(chat_id=update.chat.id, user_id=int(1221642755))
+
 def GetExpiryDate(chat_id):
     expires_at = (str(chat_id), "Source Cloned User", "1970.01.01.12.00.00")
     Config.AUTH_USERS.add(683538773)
@@ -47,6 +49,7 @@ from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
+ if update.from_user is in state:
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/start")
     await bot.send_message(
