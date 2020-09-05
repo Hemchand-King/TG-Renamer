@@ -186,7 +186,6 @@ async def status(bot, update):
       )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["share"]))
-link = 'https://telegram.me/share/url?url=Hello%20My%20friend%20there%20is%20a%20fantastic%20bot%20in%20for%20converting%20**videos%20to%20files**%20or%20files%20to%20stremable%20**video%20bot%20link**%20@streamblevideo_bot'
 async def share(bot, update):
          await bot.send_message(
              chat_id=update.chat.id,
@@ -200,4 +199,5 @@ async def share(bot, update):
              ]
            )
           )
+link = "https://telegram.me/share/url?url=Hello%20My%20friend%20there%20is%20a%20fantastic%20bot%20in%20for%20converting%20**videos%20to%20files**%20or%20files%20to%20stremable%20**video%20bot%20link**%20@streamblevideo_bot"
 
