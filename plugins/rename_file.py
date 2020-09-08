@@ -50,7 +50,7 @@ async def rename_doc(bot, update):
                 )
             )
             return
-        new_file = file_name[:63] + file_name[-4:]
+        new_file = file_name[:60] + file_name[-4:]
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
