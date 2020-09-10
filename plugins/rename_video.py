@@ -42,7 +42,7 @@ async def rename_video(bot, update):
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-        new_name = file_name[:60] + file[-4:]
+        new_name = file_name[:60] + file_name[-4:]
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         b = await bot.send_message(
