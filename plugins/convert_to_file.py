@@ -49,8 +49,8 @@ async def convert_to_file(bot, update):
         b = await bot.send_message(
             chat_id=update.chat.id,
             text="Analyzing Video.....😃",
-            reply_to_message_id=update.message_id,
-            show_alert=True
+            reply_to_message_id=update.message_id
+            #show_alert=True
         )
         start = datetime.now(tz = IST)
         c_time = time.time()
