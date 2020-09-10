@@ -131,14 +131,14 @@ async def convert_to_file(bot, update):
                     c_time
                 )
             )
-            end = datetime.now
+            end = datetime.now()
             try:
                 os.remove(the_real_download_location)
               #  os.remove(thumb_image_path)
             except:
                 pass
             await bot.edit_message_text(
-                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG.format(start),
+                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG.format(end),
                 chat_id=update.chat.id,
                 message_id=b.message_id,
                 disable_web_page_preview=True
