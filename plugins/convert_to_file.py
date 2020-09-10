@@ -42,14 +42,15 @@ async def convert_to_file(bot, update):
         return
     TRChatBase(update.from_user.id, update.text, "converttovideo")
     #if start > gap:
-        await bot.send_message(chat_id=update.chat.id, text="please waitt", show_alert=True)
+        #await bot.send_message(chat_id=update.chat.id, text="please waitt", show_alert=True)
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         b = await bot.send_message(
             chat_id=update.chat.id,
             text="Analyzing Video.....😃",
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.message_id,
+            show_alert=True
         )
         start = datetime.now(tz = IST)
         c_time = time.time()
