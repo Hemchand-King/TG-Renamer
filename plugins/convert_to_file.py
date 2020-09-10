@@ -8,8 +8,7 @@ logger = logging.getLogger(__name__)
 import os
 import random
 import time
-import datetime
-import pytz
+from datetime import datetime
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -32,6 +31,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
+gap = end + datetime.time(0, 3)
 
 @pyrogram.Client.on_message(pyrogram.Filters.video)
 async def convert_to_file(bot, update):
@@ -43,6 +43,8 @@ async def convert_to_file(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "converttovideo")
+    if start > gap:
+        await bot.send_message(chat_id=update.chat.id, text="please waitt", show_alert=True)
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -51,7 +53,7 @@ async def convert_to_file(bot, update):
             text="Analyzing Video.....😃",
             reply_to_message_id=update.message_id
         )
-        start = datetime.datetime.now(tz = IST)
+        start = datetime.now(tz = IST)
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.video,
@@ -132,7 +134,7 @@ async def convert_to_file(bot, update):
                     c_time
                 )
             )
-            end = datetime.datetime.now(tz = IST)
+            end = datetime.now(tz = IST)
             try:
                 os.remove(the_real_download_location)
               #  os.remove(thumb_image_path)
