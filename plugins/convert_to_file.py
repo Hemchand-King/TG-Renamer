@@ -32,6 +32,7 @@ from PIL import Image
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.video)
+start = datetime.now
 async def convert_to_file(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
