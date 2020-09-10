@@ -31,10 +31,10 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
-gap = end + datetime.time(0, 3)
 
 @pyrogram.Client.on_message(pyrogram.Filters.video)
 async def convert_to_file(bot, update):
+    gap = end + datetime.time(0, 3)
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
             chat_id=update.chat.id,
