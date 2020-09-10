@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 import os
 import random
 import time
-import datetime
+from datetime import datetime
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
