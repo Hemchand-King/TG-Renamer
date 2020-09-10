@@ -187,12 +187,3 @@ async def unban(bot, update):
  elif unbanid is None:
      print('please include the id of the user')
 
-from pyrogram import ForceReply 
-
-@pyrogram.Client.on_message(pyrogram.Filters.document & incoming)
-async def auto(c, m)
-        await c.send_message(
-               chat_id=m.from_user.id,
-               text='send me the file name,
-               reply_to_message_id=m.message_id,
-               reply_markup=ForceReply())
