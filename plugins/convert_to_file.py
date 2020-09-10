@@ -51,7 +51,7 @@ async def convert_to_file(bot, update):
             text="Analyzing Video.....😃",
             reply_to_message_id=update.message_id
         )
-        start = datetime.now()
+        start = datetime.now(tz = IST)
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.video,
@@ -132,7 +132,7 @@ async def convert_to_file(bot, update):
                     c_time
                 )
             )
-            end = datetime.now()
+            end = datetime.now(tz = IST)
             try:
                 os.remove(the_real_download_location)
               #  os.remove(thumb_image_path)
