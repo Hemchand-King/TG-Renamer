@@ -111,6 +111,7 @@ async def rename_video(bot, update):
                 video=new_file_name,
                 width=width,
                 height=height,
+                duration=duration,
                 thumb=thumb_image_path,
                 caption=description.format(file_name[:-4]),
                 # reply_markup=reply_markup,
