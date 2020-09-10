@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 import os
 import random
 import time
+import datetime
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -32,7 +33,6 @@ from PIL import Image
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.video)
-start = datetime.now
 async def convert_to_file(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
@@ -50,6 +50,7 @@ async def convert_to_file(bot, update):
             text="Analyzing Video.....😃",
             reply_to_message_id=update.message_id
         )
+        start = datetime.now()
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.video,
@@ -130,6 +131,7 @@ async def convert_to_file(bot, update):
                     c_time
                 )
             )
+            end = datetime.now
             try:
                 os.remove(the_real_download_location)
               #  os.remove(thumb_image_path)
