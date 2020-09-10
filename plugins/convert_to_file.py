@@ -41,7 +41,7 @@ async def convert_to_file(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "converttovideo")
-    if start > gap:
+    #if start > gap:
         await bot.send_message(chat_id=update.chat.id, text="please waitt", show_alert=True)
     if update.reply_to_message is None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
