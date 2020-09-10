@@ -16,7 +16,7 @@ Please send /help to know how to use me
     UPLOAD_START = "Upload Video to Telegram.....📤"
     UPLOAD_START_VIDEO = "Upload Video to Telegram.....📤"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Pleae join <a herf='https://t.me/anonymousbotsupporte'>anonymous discuss group 🗣</a>\n<a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Pleae join <a herf='https://t.me/anonymousbotsupporte'>anonymous discuss {} group 🗣</a>\n<a href='https://t.me/Ns_AnoNymouS'>My Father 👨‍💻</a>"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     SAVED_CUSTOM_THUMB_NAIL = "✅ Custom video / file thumbnail saved. This image will be used in next 24 hr"
