@@ -19,6 +19,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
+from pyrogram import ForceReply 
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
