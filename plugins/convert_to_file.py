@@ -33,7 +33,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.video)
 async def convert_to_file(bot, update):
-    gap = end + datetime.time(0, 3)
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
             chat_id=update.chat.id,
@@ -134,6 +133,7 @@ async def convert_to_file(bot, update):
                 )
             )
             end = datetime.now(tz = IST)
+            gap = end + datetime.time(0, 3)
             try:
                 os.remove(the_real_download_location)
               #  os.remove(thumb_image_path)
